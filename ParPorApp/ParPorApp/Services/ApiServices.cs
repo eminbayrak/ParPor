@@ -48,7 +48,7 @@ namespace ParPorApp.Services
                 HttpMethod.Post, Constants.BaseApiAddress + "Token");
 
             request.Content = new FormUrlEncodedContent(keyValues);
-
+            Acr.UserDialogs.UserDialogs.Instance.ShowSuccess("Success", 1500);
             var response = await client.SendAsync(request);
             Debug.WriteLine(response);
             Debug.WriteLine(await response.Content.ReadAsStringAsync());
