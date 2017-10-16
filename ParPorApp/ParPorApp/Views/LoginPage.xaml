@@ -24,7 +24,7 @@
             <Entry Text="{Binding Email}" Placeholder="Email"></Entry>
             <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True"></Entry>
 
-            <Button Command="{Binding LoginCommand}" BorderWidth="2" BorderRadius="20" BorderColor ="#cfefa7" BackgroundColor="#cfefa7" TextColor="White" Text="Login"></Button>
+            <Button Command="{Binding LoginCommand}" BorderWidth="2" BorderRadius="5" BorderColor ="#cfefa7" BackgroundColor="#cfefa7" TextColor="White" Text="Login"></Button>
             
             
         </StackLayout>

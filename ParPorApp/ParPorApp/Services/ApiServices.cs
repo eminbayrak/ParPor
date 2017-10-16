@@ -47,12 +47,29 @@ namespace ParPorApp.Services
             var request = new HttpRequestMessage(
                 HttpMethod.Post, Constants.BaseApiAddress + "Token");
 
-            request.Content = new FormUrlEncodedContent(keyValues);
-            Acr.UserDialogs.UserDialogs.Instance.ShowSuccess("Success", 1500);
-            var response = await client.SendAsync(request);
-            Debug.WriteLine(response);
-            Debug.WriteLine(await response.Content.ReadAsStringAsync());
-            Debug.WriteLine(response.StatusCode);
+
+            try
+            {
+                if (email == null || password == null)
+                {
+                    Acr.UserDialogs.UserDialogs.Instance.ShowError("Can't be empty");
+                }
+                else
+                {
+                    var response = await client.SendAsync(request);
+                    Acr.UserDialogs.UserDialogs.Instance.ShowSuccess("Logining...", 1500);
+
+                    Acr.UserDialogs.UserDialogs.Instance.ShowError(await response.Content.ReadAsStringAsync());
+
+                    //Debug.WriteLine(response);
+                    //Debug.WriteLine(await response.Content.ReadAsStringAsync());
+                    //Debug.WriteLine(response.StatusCode);
+                }
+            }
+            catch (Exception ex)
+            {
+                Acr.UserDialogs.UserDialogs.Instance.ShowError(ex.Message);
+            }
         }
     }
 }
