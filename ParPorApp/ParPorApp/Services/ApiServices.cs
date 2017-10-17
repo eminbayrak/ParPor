@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ParPorApp.Models;
 using Newtonsoft.Json;
+using Xamarin.Forms;
 
 namespace ParPorApp.Services
 {
@@ -26,7 +27,8 @@ namespace ParPorApp.Services
             HttpContent content = new StringContent(json);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var response = await client.PostAsync("http://localhost:50895/api/Account/Register", content);
+            var response = await client.PostAsync(
+                Constants.BaseApiAddress + "api/Account/Register", content);
             Debug.WriteLine(response);
             Debug.WriteLine(await response.Content.ReadAsStringAsync());
             Debug.WriteLine(response.StatusCode);
@@ -43,28 +45,21 @@ namespace ParPorApp.Services
                 new KeyValuePair<string, string>("grant_type", "password")
             };
 
-            // var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:50895/Token");
-            var request = new HttpRequestMessage(
-                HttpMethod.Post, Constants.BaseApiAddress + "Token");
+            var request = new HttpRequestMessage(HttpMethod.Post, Constants.BaseApiAddress + "Token");
+
+            request.Content = new FormUrlEncodedContent(keyValues);
 
 
             try
             {
-                if (email == null || password == null)
-                {
-                    Acr.UserDialogs.UserDialogs.Instance.ShowError("Can't be empty");
-                }
-                else
-                {
-                    var response = await client.SendAsync(request);
-                    Acr.UserDialogs.UserDialogs.Instance.ShowSuccess("Logining...", 1500);
+                var response = await client.SendAsync(request);
+                Acr.UserDialogs.UserDialogs.Instance.ShowSuccess("Logining...", 1500);
+                Acr.UserDialogs.UserDialogs.Instance.ShowError(await response.Content.ReadAsStringAsync());
 
-                    Acr.UserDialogs.UserDialogs.Instance.ShowError(await response.Content.ReadAsStringAsync());
+                Debug.WriteLine(response);
+                Debug.WriteLine(await response.Content.ReadAsStringAsync());
+                Debug.WriteLine(response.StatusCode);
 
-                    //Debug.WriteLine(response);
-                    //Debug.WriteLine(await response.Content.ReadAsStringAsync());
-                    //Debug.WriteLine(response.StatusCode);
-                }
             }
             catch (Exception ex)
             {

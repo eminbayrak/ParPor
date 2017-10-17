@@ -16,7 +16,6 @@ namespace ParPorApp
 
             MainPage = new NavigationPage(new RegisterPage());
         }
-
         protected override void OnStart()
         {
             // Handle when your app starts
