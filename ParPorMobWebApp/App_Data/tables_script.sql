@@ -1,4 +1,4 @@
-CREATE TABLE [dbo].Account (
+﻿CREATE TABLE [dbo].Account (
 	Id int NOT NULL IDENTITY(1,1),
 	FirstName varchar(50),
 	LastName varchar(50),
@@ -95,4 +95,3 @@ CREATE TABLE [dbo].StudentGroupMap (
 	StudentId int NOT NULL,
 	GroupId int NOT NULL
 );
-
