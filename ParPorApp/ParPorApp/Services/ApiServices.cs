@@ -17,6 +17,7 @@ namespace ParPorApp.Services
         public async Task RegisterUserAsync(string email, string password, string confirmPassword)
         {
             var client = new HttpClient();
+            //var success = false;
             var model = new RegisterBindingModel
             {
                 Email = email,
@@ -24,14 +25,34 @@ namespace ParPorApp.Services
                 ConfirmPassword = confirmPassword
             };
             var json = JsonConvert.SerializeObject(model);
-            HttpContent content = new StringContent(json);
-            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-
+                HttpContent content = new StringContent(json);
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
             var response = await client.PostAsync(
                 Constants.BaseApiAddress + "api/Account/Register", content);
-            Debug.WriteLine(response);
-            Debug.WriteLine(await response.Content.ReadAsStringAsync());
-            Debug.WriteLine(response.StatusCode);
+                Debug.WriteLine(response);
+                Debug.WriteLine(await response.Content.ReadAsStringAsync());
+                Debug.WriteLine(response.StatusCode);
+
+            //try
+            //{
+            //    var json = JsonConvert.SerializeObject(model);
+            //    HttpContent content = new StringContent(json);
+            //    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            //    if (email != null || password != null)
+            //    {
+            //        success = true;
+            //        Acr.UserDialogs.UserDialogs.Instance.ShowSuccess(string.Format("You are now signed-in as {0}.", email));
+            //        var response = await client.PostAsync(
+            //            Constants.BaseApiAddress + "api/Account/Register", content);
+            //        Debug.WriteLine(response);
+            //        Debug.WriteLine(await response.Content.ReadAsStringAsync());
+            //        Debug.WriteLine(response.StatusCode);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Acr.UserDialogs.UserDialogs.Instance.ShowError(string.Format("Authentication Failed: {0}", ex.Message));
+            //}
         }
 
         // Login user
@@ -48,8 +69,7 @@ namespace ParPorApp.Services
             var request = new HttpRequestMessage(HttpMethod.Post, Constants.BaseApiAddress + "Token");
 
             request.Content = new FormUrlEncodedContent(keyValues);
-
-
+            
             try
             {
                 var response = await client.SendAsync(request);
@@ -59,7 +79,6 @@ namespace ParPorApp.Services
                 Debug.WriteLine(response);
                 Debug.WriteLine(await response.Content.ReadAsStringAsync());
                 Debug.WriteLine(response.StatusCode);
-
             }
             catch (Exception ex)
             {
@@ -68,3 +87,4 @@ namespace ParPorApp.Services
         }
     }
 }
+

@@ -8,7 +8,7 @@ namespace ParPorApp
 {
     public class Constants
     {
-        public static string BaseApiAddress => "http://localhost:50895/";
+        public static string BaseApiAddress => "http://parpormobileapp.azurewebsites.net/";
         public static int LogoIconHeight = 120;
     }
 }
