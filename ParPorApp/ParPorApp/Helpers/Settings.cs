@@ -38,6 +38,21 @@ namespace ParPorApp.Helpers
 				AppSettings.AddOrUpdateValue(SettingsKey, value);
 			}
 		}
+	    private const string IsLoginKey = "login_key";
+	    private static readonly bool IsLoginDefault = false;
 
-	}
+	    //Then adding this property
+	    public static bool IsLoggedIn
+	    {
+	        get
+	        {
+	            return AppSettings.GetValueOrDefault(IsLoginKey, IsLoginDefault);
+	        }
+	        set
+	        {
+	            AppSettings.AddOrUpdateValue(IsLoginKey, value);
+	        }
+	    }
+
+    }
 }

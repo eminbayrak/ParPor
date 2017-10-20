@@ -1,32 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:ParPorApp.ViewModels;assembly=ParPorApp"
              x:Class="ParPorApp.Views.LoginPage">
     <ContentPage.BindingContext>
-        <viewModels:LoginViewModel/>
+        <viewModels:LoginViewModel />
     </ContentPage.BindingContext>
-    
-    <ContentPage.Content>
-        
-        <StackLayout VerticalOptions="CenterAndExpand">
-            <Image x:Name="LogoIcon" Source="logo.png" Margin="20,40,20,0"/>
-            <StackLayout.Padding>
-                <OnIdiom x:TypeArguments="Thickness">
-                    <OnIdiom.Phone>
-                        40,0,40,140
-                    </OnIdiom.Phone>
-                    <OnIdiom.Tablet>
-                        140,150,140,0
-                    </OnIdiom.Tablet>
-                </OnIdiom>
-            </StackLayout.Padding>
-            <Entry Text="{Binding Email}" Placeholder="Email"></Entry>
-            <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True"></Entry>
 
-            <Button Command="{Binding LoginCommand}" BorderWidth="2" BorderRadius="5" BorderColor ="#cfefa7" BackgroundColor="#cfefa7" TextColor="White" Text="Login"></Button>
-            
-            
-        </StackLayout>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="LightSlateGray">
+                <Image x:Name="LogoIcon" Source="logo.png" Margin="20,40,20,40" />
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness">
+                        <OnIdiom.Phone>
+                            40,0,40,140
+                        </OnIdiom.Phone>
+                        <OnIdiom.Tablet>
+                            140,150,140,0
+                        </OnIdiom.Tablet>
+                    </OnIdiom>
+                </StackLayout.Padding>
+                <Entry Text="{Binding Email}" Placeholder="Email"></Entry>
+                <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True"></Entry>
+
+                <Button Command="{Binding LoginCommand}" BorderWidth="2" BorderRadius="5" BorderColor="#cfefa7"
+                        BackgroundColor="#cfefa7" TextColor="White" Text="Login">
+                </Button>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

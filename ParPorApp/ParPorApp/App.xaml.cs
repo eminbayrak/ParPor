@@ -1,9 +1,6 @@
 ﻿using ParPorApp.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+using ParPorApp.Helpers;
+using ParPorApp.ViewModels;
 using Xamarin.Forms;
 
 namespace ParPorApp
@@ -14,7 +11,14 @@ namespace ParPorApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new RegisterPage());
+            if (Settings.IsLoggedIn)
+            {
+                MainPage = new NavigationPage(new HomePage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
         }
         protected override void OnStart()
         {

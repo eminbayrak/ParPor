@@ -73,8 +73,8 @@ namespace ParPorApp.Services
             try
             {
                 var response = await client.SendAsync(request);
-                Acr.UserDialogs.UserDialogs.Instance.ShowSuccess("Logining...", 1500);
-                Acr.UserDialogs.UserDialogs.Instance.ShowError(await response.Content.ReadAsStringAsync());
+                //Acr.UserDialogs.UserDialogs.Instance.ShowSuccess("Logining...", 1500);
+                //Acr.UserDialogs.UserDialogs.Instance.ShowError(await response.Content.ReadAsStringAsync());
 
                 Debug.WriteLine(response);
                 Debug.WriteLine(await response.Content.ReadAsStringAsync());
