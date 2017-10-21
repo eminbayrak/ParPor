@@ -1,6 +1,6 @@
 ﻿{
   "dependencies": {
-    "Acr.UserDialogs": "6.5.1",
+    "Acr.UserDialogs": "6.5.0",
     "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.0.2",
     "Microsoft.Bcl.Async": "1.0.168",
     "Microsoft.Bcl.Build": "1.0.21",
@@ -8,7 +8,7 @@
     "Newtonsoft.Json": "10.0.3",
     "Xam.Plugin.Connectivity": "3.0.3",
     "Xam.Plugins.Settings": "3.1.1",
-    "Xamarin.Forms": "2.4.0.282"
+    "Xamarin.Forms": "2.4.0.18342"
   },
   "frameworks": {
     "uap10.0.10586": {}

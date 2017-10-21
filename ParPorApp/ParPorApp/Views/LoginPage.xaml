@@ -10,7 +10,7 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout BackgroundColor="LightSlateGray">
+            <StackLayout>
                 <Image x:Name="LogoIcon" Source="logo.png" Margin="20,40,20,40" />
                 <StackLayout.Padding>
                     <OnIdiom x:TypeArguments="Thickness">
@@ -28,6 +28,7 @@
                 <Button Command="{Binding LoginCommand}" BorderWidth="2" BorderRadius="5" BorderColor="#cfefa7"
                         BackgroundColor="#cfefa7" TextColor="White" Text="Login">
                 </Button>
+                <Label x:Name="messageLabel" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

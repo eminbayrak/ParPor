@@ -11,14 +11,15 @@ namespace ParPorApp
         {
             InitializeComponent();
 
-            if (Settings.IsLoggedIn)
-            {
-                MainPage = new NavigationPage(new HomePage());
-            }
-            else
+            if (!Settings.IsLoggedIn)
             {
                 MainPage = new NavigationPage(new LoginPage());
             }
+            else
+            {
+                MainPage = new NavigationPage(new HomePage());
+            }
+
         }
         protected override void OnStart()
         {

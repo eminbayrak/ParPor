@@ -1,4 +1,3 @@
-/*
 // Helpers/Settings.cs This file was automatically added when you installed the Settings Plugin. If you are not using a PCL then comment this file back in to use it.
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
@@ -40,5 +39,21 @@ namespace ParPorApp.Droid.Helpers
 			}
 		}
 
-	}
-}*/
+        #region Login Constants
+        private const string IsLoginKey = "login_key";
+	    private static readonly bool IsLoginDefault = false;
+        #endregion
+
+        public static bool IsLoggedIn
+	    {
+	        get
+	        {
+	            return AppSettings.GetValueOrDefault(IsLoginKey, IsLoginDefault);
+	        }
+	        set
+	        {
+	            AppSettings.AddOrUpdateValue(IsLoginKey, value);
+	        }
+	    }
+    }
+}

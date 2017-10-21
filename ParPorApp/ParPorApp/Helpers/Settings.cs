@@ -11,7 +11,9 @@ namespace ParPorApp.Helpers
 	/// </summary>
 	public static class Settings
 	{
-		private static ISettings AppSettings
+	    private const string IsLoginKey = "Token";
+	    private static readonly bool IsLoginDefault = false;
+        private static ISettings AppSettings
 		{
 			get
 			{
@@ -38,11 +40,8 @@ namespace ParPorApp.Helpers
 				AppSettings.AddOrUpdateValue(SettingsKey, value);
 			}
 		}
-	    private const string IsLoginKey = "login_key";
-	    private static readonly bool IsLoginDefault = false;
 
-	    //Then adding this property
-	    public static bool IsLoggedIn
+        public static bool IsLoggedIn
 	    {
 	        get
 	        {
