@@ -17,7 +17,7 @@ namespace ParPorApp
             }
             else
             {
-                MainPage = new NavigationPage(new HomePage());
+                MainPage = new NavigationPage(new LoginPage());
             }
 
         }
