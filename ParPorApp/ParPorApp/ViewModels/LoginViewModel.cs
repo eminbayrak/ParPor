@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using ParPorApp.Helpers;
 using ParPorApp.Services;
+using ParPorApp.Views;
 using Xamarin.Forms;
 
 namespace ParPorApp.ViewModels
@@ -43,15 +44,13 @@ namespace ParPorApp.ViewModels
             // Simple authentication for now
             bool loggedIn = true;
 
-            if (loggedIn)
+            // Show the root tab controller
+            await Application.Current.MainPage.Navigation.PushAsync(new MasterDetailPage()
             {
-                // Show the root tab controller
-                await App.Current.MainPage.Navigation.PushAsync(new HomePage());
-            }
-            else
-            {
-                // Say something about wrong username/password
-            }
+                Master = new MasterPage() { Title = "Main Page" },
+
+                Detail = new NavigationPage(new SocialPage())
+            });
         }
     }
 }
