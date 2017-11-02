@@ -8,8 +8,8 @@ namespace ParPorApp
 {
     public static class Constants
     {
-        public static string BaseApiAddress => "http://parpormobileapp.azurewebsites.net/";
-        //public static string BaseApiAddress => "http://localhost:53798/";
+        //public static string BaseApiAddress => "http://parpormobileapp.azurewebsites.net/";
+        public static string BaseApiAddress => "https://parentportal.auth0.com/login?client=gVAvxHhgFiO1r99A5zvQWPlvsSJDiB2g/";
 
         public static int LogoIconHeight = 120;
     }
