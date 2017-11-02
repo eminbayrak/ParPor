@@ -235,6 +235,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_navigation_arrow_forward.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_settings.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_social_person_add.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_toggle_check_box.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_toggle_check_box_outline_blank.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_trending_up.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_winner.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_meetup.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_navigation_arrow_forward.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_settings.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_social_person_add.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_toggle_check_box.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_toggle_check_box_outline_blank.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_trending_up.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_winner.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values-v21\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <None Include="app.config" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
@@ -259,7 +280,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
-    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ParPorApp\ParPorApp.csproj">

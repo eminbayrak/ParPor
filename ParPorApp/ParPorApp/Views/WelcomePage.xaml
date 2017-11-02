@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParPorApp.Views.WelcomePage"
+             IsBusy="{Binding IsBusy}"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid RowSpacing="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Image x:Name="HeroImage"
+                   Grid.Row="1" 
+                   Source="ic_meetup.png" 
+                   Aspect="AspectFit" 
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand" />
+            <StackLayout Grid.Row="3" StyleId="BusyStack" HorizontalOptions="Center" Orientation="Horizontal" Spacing="10" Padding="10" IsVisible="{Binding IsBusy}">
+                <ActivityIndicator  StyleId="BusySpinner"
+                                   HorizontalOptions="Center"
+                                   IsRunning="{Binding IsBusy}"
+                                   IsVisible="{Binding IsBusy}"/>
+                <Label 
+                     StyleId="BusyLabel"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Grid.Row="4" Padding="10" HorizontalOptions="FillAndExpand">
+                <Label Grid.Row="4" 
+                       TextColor="Gray"
+                       XAlign="Center"
+                       Text="Let's get you login, so you can see what's your team up to."/>
+            </StackLayout>
+            <Button x:Name="ButtonLogin" 
+                    StyleId="ButtonLogin"
+                    Grid.Row="5" 
+                    BackgroundColor="#f1836e" 
+                    BorderRadius="0" 
+                    TextColor="White" 
+                    Text="Login to Portal"
+                    Clicked="ButtonLogin_OnClicked" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

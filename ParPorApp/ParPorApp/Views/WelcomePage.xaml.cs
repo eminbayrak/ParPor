@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ParPorApp.Models;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace ParPorApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MasterPage : ContentPage
+    public partial class WelcomePage : ContentPage
     {
-        public MasterPage()
+        public WelcomePage()
         {
             InitializeComponent();
-            BindingContext = new MasterViewModel();
+        }
+
+        private async void ButtonLogin_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
         }
     }
 }

@@ -45,12 +45,7 @@ namespace ParPorApp.ViewModels
             bool loggedIn = true;
 
             // Show the root tab controller
-            await Application.Current.MainPage.Navigation.PushAsync(new MasterDetailPage()
-            {
-                Master = new MasterPage() { Title = "Main Page" },
-
-                Detail = new NavigationPage(new SocialPage())
-            });
+            await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
         }
     }
 }
