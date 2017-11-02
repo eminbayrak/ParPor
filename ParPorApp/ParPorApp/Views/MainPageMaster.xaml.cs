@@ -6,7 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-
+using ParPorApp.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -33,10 +33,10 @@ namespace ParPorApp.Views
             {
                 MenuItems = new ObservableCollection<MainPageMenuItem>(new[]
                 {
-                    new MainPageMenuItem { Id = 0, Title = "My Group" },
-                    new MainPageMenuItem { Id = 1, Title = "Social" },
-                    new MainPageMenuItem { Id = 2, Title = "Events" },
-                    new MainPageMenuItem { Id = 3, Title = "Schedule" },
+                    new MainPageMenuItem { Id = 0, Title = "My Group", IconSource = "fa-cog", TargetType=typeof(HomePage)},
+                    new MainPageMenuItem { Id = 1, Title = "Social", IconSource = "fa-cog", TargetType=typeof(SocialPage)},
+                    new MainPageMenuItem { Id = 2, Title = "Events", IconSource = "fa-cog", TargetType=typeof(HomePage) },
+                    new MainPageMenuItem { Id = 3, Title = "Schedule", IconSource = "fa-cog", TargetType=typeof(SchedulePage) },
                 });
             }
 

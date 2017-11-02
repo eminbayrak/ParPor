@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Newtonsoft.Json;
+using Plugin.RestClient;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,5 +22,7 @@ namespace ParPorApp.Views
         {
             await Navigation.PushAsync(new LoginPage());
         }
+        
+
     }
 }
