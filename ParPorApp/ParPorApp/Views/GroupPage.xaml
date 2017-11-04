@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ParPorApp.Views.GroupPage">
-  <ListView x:Name="MyListView" HasUnevenRows="True"
+  <ListView x:Name="groupView" 
+            HasUnevenRows="True"
+            ItemSelected="GroupView_OnItemSelected"
             ItemsSource="{Binding Items}"
-            ItemTapped="Handle_ItemTapped"
             CachingStrategy="RecycleElement">
             
     <!--Built in Cells-->
@@ -16,7 +17,6 @@
                         <StackLayout HorizontalOptions="StartAndExpand">
                             <Label Text="{Binding Name}"/>
                             <Label Text="{Binding Description}"/>
-                            <Button Text="Contact" />
                         </StackLayout>
                     </StackLayout>
                 </ViewCell>

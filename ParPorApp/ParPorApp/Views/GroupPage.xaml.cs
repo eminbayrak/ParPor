@@ -20,21 +20,20 @@ namespace ParPorApp.Views
         {
             InitializeComponent();
 
-            MyListView.ItemsSource = new List<Group>
+            groupView.ItemsSource = new List<Group>
             {
-                new Group{ Name = "Princeton Vikings Soccer", ImageUrl = "princetonSoccer.png", Description = "Princeton High School Soccer Group"}
+                new Group{ Name = "Ashley O'Toole", ImageUrl = "princetonSoccer.png", Description = "Main O'Toole's parent"},
+                new Group{ Name = "Andrue Steven", ImageUrl = "princetonSoccer.png", Description = "Charlie Steven's parent"}
             };
         }
 
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        async void GroupView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.Item == null)
+            if (e.SelectedItem == null)
                 return;
-
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
-
-            //Deselect Item
-            ((ListView) sender).SelectedItem = null;
+            var contact = e.SelectedItem as Group;
+            await Navigation.PushAsync(new ContactDetailPage(contact));
+            groupView.SelectedItem = null;
         }
     }
 }

@@ -5,6 +5,7 @@
              IsBusy="{Binding IsBusy}"
              NavigationPage.HasBackButton="False"
              NavigationPage.HasNavigationBar="False">
+    
     <ContentPage.Content>
         <Grid RowSpacing="10" ColumnSpacing="10">
             <Grid.RowDefinitions>
