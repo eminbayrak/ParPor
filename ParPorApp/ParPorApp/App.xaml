@@ -2,7 +2,7 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParPorApp.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#cfefa7</Color>
+            <Color x:Key="Primary">Black</Color>
             <Color x:Key="PrimaryDark">#354b60</Color>
             <Color x:Key="Accent">#cfefa7</Color>
             <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
@@ -11,8 +11,8 @@
             <Color x:Key="LightTextColor">#999999</Color>
 
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
-                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Accent}" />
+                <Setter Property="BarTextColor" Value="Black" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

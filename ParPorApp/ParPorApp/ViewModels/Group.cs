@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace ParPorApp.Models
+namespace ParPorApp.ViewModels
 {
-    public class Group
+    public partial class Group
     {
         [JsonProperty("Description")]
         public string Description { get; set; }
@@ -22,6 +22,5 @@ namespace ParPorApp.Models
         public string Name { get; set; }
 
         public string ImageUrl { get; set; }
-
     }
 }
