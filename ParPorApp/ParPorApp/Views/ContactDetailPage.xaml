@@ -4,10 +4,16 @@
              x:Class="ParPorApp.Views.ContactDetailPage"
              Title="{Binding Name}">
     <ContentPage.Content>
-        <StackLayout Padding="20">
-            <Label Text="{Binding Name}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Horizontal" Padding="5">
+            <Image
+                x:Name="Image"
+                WidthRequest="75"
+                HeightRequest="75"
+                Source="{Binding ImageUrl}" />
+            <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Center">
+                <Label Text="{Binding Name}"/>
+                <Label Text="{Binding Description}"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

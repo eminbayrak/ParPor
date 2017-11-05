@@ -7,6 +7,9 @@ namespace ParPorApp
 {
     public partial class App : Application
     {
+        public static uint AnimationSpeed = 250;
+        public static int DelaySpeed = 300;
+        static App _instance;
         public App()
         {
             InitializeComponent();

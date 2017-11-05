@@ -13,8 +13,12 @@
         <DataTemplate>
                 <ViewCell>
                     <StackLayout Orientation="Horizontal" Padding="5">
-                        <Image Source="Binding ImageUrl"/>
-                        <StackLayout HorizontalOptions="StartAndExpand">
+                        <Image
+                            x:Name="Image"
+                            WidthRequest="55"
+                            HeightRequest="55"
+                            Source="{Binding ImageUrl}" />
+                        <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Center">
                             <Label Text="{Binding Name}"/>
                             <Label Text="{Binding Description}"/>
                         </StackLayout>

@@ -262,9 +262,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ParPorApp\ParPorApp.csproj">
-      <Project>{e4fe3df2-5fdf-4d6f-9273-b04f5c6e0150}</Project>
-      <Name>ParPorApp</Name>
+    <ProjectReference Include="..\ParPorApp\ParPorApp.Shared.csproj">
+      <Project>{8D679990-57F4-4D00-8BB9-B6B20FCAB579}</Project>
+      <Name>ParPorApp.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

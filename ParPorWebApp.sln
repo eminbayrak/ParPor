@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParPorApp.Android", "ParPorApp\ParPorApp.Android\ParPorApp.Android.csproj", "{A7D4F3D0-2604-4C20-88AD-DF41EFDAA133}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParPorApp.Droid", "ParPorApp\ParPorApp.Android\ParPorApp.Droid.csproj", "{A7D4F3D0-2604-4C20-88AD-DF41EFDAA133}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParPorApp", "ParPorApp\ParPorApp\ParPorApp.csproj", "{8D679990-57F4-4D00-8BB9-B6B20FCAB579}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParPorApp.Shared", "ParPorApp\ParPorApp\ParPorApp.Shared.csproj", "{8D679990-57F4-4D00-8BB9-B6B20FCAB579}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParPorApp.UWP", "ParPorApp\ParPorApp.UWP\ParPorApp.UWP.csproj", "{52943B49-15CD-4EB0-9FC7-EA84F7298952}"
 EndProject

@@ -15,14 +15,15 @@ namespace ParPorApp.Views
     {
         public WelcomePage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+            Title = "Welcome!";
         }
 
         private async void ButtonLogin_OnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new LoginPage());
-        }
-        
 
+        }
     }
 }
