@@ -12,7 +12,7 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout Spacing="10">
                 <Image x:Name="LogoIcon" Source="logo.png" Margin="20,40,20,40" />
                 <StackLayout.Padding>
                     <OnIdiom x:TypeArguments="Thickness">
@@ -24,8 +24,8 @@
                         </OnIdiom.Tablet>
                     </OnIdiom>
                 </StackLayout.Padding>
-                <Entry Text="{Binding Email}" Placeholder="Email"></Entry>
-                <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True"></Entry>
+                <Entry x:Name="EmailEntry" Text="{Binding Email}" Placeholder="Email" Keyboard="Email"></Entry>
+                <Entry x:Name="PasswordEntry" Text="{Binding Password}" Placeholder="Password" IsPassword="True"></Entry>
 
                 <Button Command="{Binding LoginCommand}" BorderWidth="2" BorderRadius="5" BorderColor="#cfefa7"
                         BackgroundColor="#cfefa7" TextColor="White" Text="Login">

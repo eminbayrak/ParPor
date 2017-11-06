@@ -82,7 +82,7 @@ namespace ParPorApp.Services
             }
             catch (Exception ex)
             {
-                Acr.UserDialogs.UserDialogs.Instance.ShowError(ex.Message);
+                //Acr.UserDialogs.UserDialogs.Instance.ShowError(ex.Message);
             }
         }
     }

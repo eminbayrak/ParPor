@@ -17,7 +17,10 @@ namespace ParPorApp.Views
         public LoginPage()
         {
             InitializeComponent();
-
+            EmailEntry.Completed += (object sender, EventArgs e) =>
+            {
+                PasswordEntry.Focus();
+            };
             
             Init();
         }

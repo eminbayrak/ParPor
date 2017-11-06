@@ -16,28 +16,28 @@ namespace ParPorApp.ViewModels
         public string Email { get; set; }
         public string Password { get; set; }
 
-//        public ICommand LoginCommand
-//        {
-//            get
-//            {
-//                return new Command(async () =>
-//                {
-//                    ApiServices apiServices = new ApiServices();
-//                    await apiServices.LoginUserAsync(Email, Password);
-//                });
-//            }
-//        }
-        
-            public ICommand loginCommand;
-
-        public ICommand LoginCommand =>
-            loginCommand ?? (loginCommand = new Command(async () =>
+        public ICommand LoginCommand
+        {
+            get
             {
-                ApiServices apiServices = new ApiServices();
-                await apiServices.LoginUserAsync(Email, Password);
-                await ExecuteLoginCommandAsync();
+                return new Command(async () =>
+                {
+                    ApiServices apiServices = new ApiServices();
+                    await apiServices.LoginUserAsync(Email, Password);
+                    await ExecuteLoginCommandAsync();
+                });
+            }
+        }
 
-            }));
+        //public ICommand loginCommand;
+        //public ICommand LoginCommand =>
+        //    loginCommand ?? (loginCommand = new Command(async () =>
+        //    {
+        //        ApiServices apiServices = new ApiServices();
+        //        await apiServices.LoginUserAsync(Email, Password);
+        //        await ExecuteLoginCommandAsync();
+
+        //    }));
 
         async Task ExecuteLoginCommandAsync()
         {

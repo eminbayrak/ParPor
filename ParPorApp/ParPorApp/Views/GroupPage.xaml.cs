@@ -31,31 +31,32 @@ namespace ParPorApp.Views
     
     public partial class GroupPage : ContentPage
     {
-        private const string Url = "http://localhost:55000/api/groups";
-        private HttpClient _client = new HttpClient();
-        private ObservableCollection<ApiGroup> _groups;
+        //private const string Url = "http://localhost:55000/api/groups";
+        //private HttpClient _client = new HttpClient();
+        //private ObservableCollection<ApiGroup> _groups;
 
-        //public ObservableCollection<string> Items { get; set; }
+        public ObservableCollection<string> Items { get; set; }
 
         public GroupPage()
         {
             InitializeComponent();
 
-            //groupView.ItemsSource = new List<Group>
-            //{
-            //    new Group{ Name = "Ashley O'Toole", ImageUrl = "fa-cog", Description = "Main O'Toole's parent"},
-            //    new Group{ Name = "Andrue Steven", ImageUrl = "fa-cog", Description = "Charlie Steven's parent"}
-            //};
-        }
-        protected override async void OnAppearing()
-        {
-            var content = await _client.GetStringAsync(Url);
-            var groups = JsonConvert.DeserializeObject<List<ApiGroup>>(content);
-            _groups = new ObservableCollection<ApiGroup>(groups);
-            groupView.ItemsSource = _groups;
-
+            groupView.ItemsSource = new List<Group>
+            {
+                new Group{ Name = "Ashley O'Toole", ImageUrl = "fa-cog", Description = "Main O'Toole's parent"},
+                new Group{ Name = "Andrue Steven", ImageUrl = "fa-cog", Description = "Charlie Steven's parent"}
+            };
             base.OnAppearing();
         }
+        //protected override async void OnAppearing()
+        //{
+        //    var content = await _client.GetStringAsync(Url);
+        //    var groups = JsonConvert.DeserializeObject<List<ApiGroup>>(content);
+        //    _groups = new ObservableCollection<ApiGroup>(groups);
+        //    groupView.ItemsSource = _groups;
+
+           
+        //}
 
         async void GroupView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {

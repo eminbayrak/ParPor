@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace ParPorApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SocialPage : ContentPage
+    public partial class SocialPage : TabbedPage
     {
         public SocialPage()
         {

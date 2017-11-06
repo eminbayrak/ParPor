@@ -6,22 +6,24 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using ParPorApp.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace ParPorApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public class Post
-    {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Body { get; set; }
-    }
+    //public class Post
+    //{
+    //    public int Id { get; set; }
+    //    public string Title { get; set; }
+    //    public string Body { get; set; }
+    //}
 
     public partial class ApiPage : ContentPage
     {
-        private const string Url = "https://jsonplaceholder.typicode.com/posts";
+        //private const string Url = "https://jsonplaceholder.typicode.com/posts";
+        private const string Url = "http://localhost:55000/api/post";
         private HttpClient _client = new HttpClient();
         private ObservableCollection<Post> _posts;
         public ApiPage()
