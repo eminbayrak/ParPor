@@ -15,6 +15,11 @@ namespace ParPorApp.Views
         public SocialPage()
         {
             InitializeComponent();
+            
+            Children.Add(new LatestPage() { Title = "Events"});
+            Children.Add(new TablePage() { Title = "Table" });
+            Children.Add(new GamesPage() { Title = "Games" });
+            
         }
     }
 }

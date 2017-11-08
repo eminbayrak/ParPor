@@ -22,7 +22,10 @@ namespace ParPorApp.ViewModels
                 return new Command(async () =>
                 {
                     ApiServices apiServices = new ApiServices();
-                    await apiServices.RegisterUserAsync(Email, Password, ConfirmPassword);
+                    await Task.Run(() =>
+                    {
+                        return apiServices.RegisterUserAsync(Email, Password, ConfirmPassword);
+                    });
                     //if (isRegistered)
                     //{
                     //    Acr.UserDialogs.UserDialogs.Instance.ShowSuccdess("Success :)");

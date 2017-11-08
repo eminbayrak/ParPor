@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Foundation;
 using UIKit;
 
@@ -67,7 +66,11 @@ namespace ParPorApp.iOS
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
+            
+
+            
         }
+        
 
         public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
         {

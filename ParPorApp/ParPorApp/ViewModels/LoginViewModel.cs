@@ -13,6 +13,7 @@ namespace ParPorApp.ViewModels
 {
     public class LoginViewModel
     {
+        private ApiServices _apiServices = new ApiServices();
         public string Email { get; set; }
         public string Password { get; set; }
 
@@ -22,22 +23,15 @@ namespace ParPorApp.ViewModels
             {
                 return new Command(async () =>
                 {
-                    ApiServices apiServices = new ApiServices();
-                    await apiServices.LoginUserAsync(Email, Password);
+                    
+                    await Task.Run(() =>
+                    {
+                        return _apiServices.LoginUserAsync(Email, Password);
+                    });
                     await ExecuteLoginCommandAsync();
                 });
             }
         }
-
-        //public ICommand loginCommand;
-        //public ICommand LoginCommand =>
-        //    loginCommand ?? (loginCommand = new Command(async () =>
-        //    {
-        //        ApiServices apiServices = new ApiServices();
-        //        await apiServices.LoginUserAsync(Email, Password);
-        //        await ExecuteLoginCommandAsync();
-
-        //    }));
 
         async Task ExecuteLoginCommandAsync()
         {

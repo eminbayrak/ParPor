@@ -17,7 +17,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
@@ -55,10 +55,10 @@
       <HintPath>..\..\packages\Acr.Support.2.1.0\lib\MonoAndroid10\Acr.Support.Android.dll</HintPath>
     </Reference>
     <Reference Include="Acr.UserDialogs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Acr.UserDialogs.6.5.1\lib\MonoAndroid10\Acr.UserDialogs.dll</HintPath>
+      <HintPath>..\..\packages\Acr.UserDialogs.6.4.0\lib\MonoAndroid10\Acr.UserDialogs.dll</HintPath>
     </Reference>
     <Reference Include="Acr.UserDialogs.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Acr.UserDialogs.6.5.1\lib\MonoAndroid10\Acr.UserDialogs.Interface.dll</HintPath>
+      <HintPath>..\..\packages\Acr.UserDialogs.6.4.0\lib\MonoAndroid10\Acr.UserDialogs.Interface.dll</HintPath>
     </Reference>
     <Reference Include="AndHUD, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AndHUD.1.2.0\lib\MonoAndroid\AndHUD.dll</HintPath>
@@ -156,8 +156,8 @@
     <Reference Include="Plugin.Settings.Abstractions, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugins.Settings.3.1.1\lib\MonoAndroid10\Plugin.Settings.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Splat, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Splat.2.0.0\lib\MonoAndroid403\Splat.dll</HintPath>
+    <Reference Include="Splat, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Splat.1.6.2\lib\monoandroid\Splat.dll</HintPath>
     </Reference>
     <Reference Include="SQLitePCLRaw.batteries_green, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a84b7dcfb1391f7f, processorArchitecture=MSIL">
       <HintPath>..\..\packages\SQLitePCLRaw.bundle_green.1.1.8\lib\MonoAndroid\SQLitePCLRaw.batteries_green.dll</HintPath>
@@ -267,17 +267,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_navigation_arrow_forward.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_settings.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_social_person_add.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_toggle_check_box.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_toggle_check_box_outline_blank.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_trending_up.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_winner.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_meetup.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_settings.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_settings.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\values\colors.xml">
       <SubType>Designer</SubType>
@@ -286,14 +277,31 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\princetonSoccer.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_meetup.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_settings.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_meetup.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_meetup.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_settings.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_account_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_account_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_account_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_account_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_account_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_account_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_account_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_account_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_account_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_account_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_account_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_account_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_account_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_account_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_account_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_account_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_account_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_account_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_account_black_36dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_account_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_event_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_event_black_18dp.png" />
     <None Include="app.config" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
@@ -330,9 +338,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\bg.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\font-awesome.css" />

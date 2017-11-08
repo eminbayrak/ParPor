@@ -22,6 +22,7 @@ namespace ParPorApp.Models
         public string Name { get; set; }
 
         public string ImageUrl { get; set; }
-
+        public string Phone { get; internal set; }
+        public string Email { get; internal set; }
     }
 }

@@ -43,8 +43,14 @@ namespace ParPorApp.Views
 
             groupView.ItemsSource = new List<Group>
             {
-                new Group{ Name = "Ashley O'Toole", ImageUrl = "fa-cog", Description = "Main O'Toole's parent"},
-                new Group{ Name = "Andrue Steven", ImageUrl = "fa-cog", Description = "Charlie Steven's parent"}
+                new Group{ Name = "Ashley O'Toole", ImageUrl = "princetonSoccer", Description = "Main O'Toole's parent", Phone = "555-555-5555", Email = "ashley@mail.com"},
+                new Group{ Name = "Andrue Stephen", ImageUrl = "princetonSoccer", Description = "Carlie Stephen's parent", Phone = "555-555-5555", Email = "andrue@mail.com"},
+                new Group{ Name = "Alexis Alper", ImageUrl = "princetonSoccer", Description = "Addison Alper's parent", Phone = "555-555-5555", Email = "alexis@mail.com"},
+                new Group{ Name = "Rhonda Shay", ImageUrl = "princetonSoccer", Description = "Caitlyn Shay's parent", Phone = "555-555-5555", Email = "rhonda@mail.com"},
+                new Group{ Name = "Catherine Mason", ImageUrl = "princetonSoccer", Description = "Allison's parent", Phone = "555-555-5555", Email = "catherine@mail.com"},
+                new Group{ Name = "Elise Wene", ImageUrl = "princetonSoccer", Description = "Grace Wene's parent", Phone = "555-555-5555", Email = "kacey@mail.com"},
+                new Group{ Name = "Hannah Kemen", ImageUrl = "princetonSoccer", Description = "Haley Kemen's parent", Phone = "555-555-5555", Email = "hannah@mail.com"},
+                new Group{ Name = "Kacey Bail", ImageUrl = "princetonSoccer", Description = "Charlie Steven's parent", Phone = "555-555-5555", Email = "kacey@mail.com"}
             };
             base.OnAppearing();
         }

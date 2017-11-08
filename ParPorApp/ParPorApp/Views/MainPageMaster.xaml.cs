@@ -31,6 +31,7 @@ namespace ParPorApp.Views
 
             public MainPageMasterViewModel()
             {
+
                 MenuItems = new ObservableCollection<MainPageMenuItem>(new[]
                 {
                     new MainPageMenuItem { Id = 0, Title = "My Group", Icon = "fa-cog", TargetType=typeof(GroupPage)},
