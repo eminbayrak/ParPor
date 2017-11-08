@@ -10,8 +10,8 @@
             CachingStrategy="RecycleElement">
             
     <!--Built in Cells-->
-        <ListView.ItemTemplate>
-            <DataTemplate>
+    <ListView.ItemTemplate>
+        <DataTemplate>
                 <ViewCell>
                     <StackLayout Orientation="Horizontal" Padding="5">
                         <abstractions:CircleImage
@@ -25,6 +25,22 @@
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    </ListView.ItemTemplate>
+    
+    <!--Custom View Cells-->
+    <!--
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout>
+            <Label Text="{Binding Text}" 
+                   Style="{DynamicResource ListItemTextStyle}" />
+            <Label Text="{Binding Detail}" 
+                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+    -->
+  </ListView>
 </ContentPage>
