@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParPorApp.Droid", "ParPorApp\ParPorApp.Android\ParPorApp.Droid.csproj", "{A7D4F3D0-2604-4C20-88AD-DF41EFDAA133}"
 EndProject
@@ -12,8 +12,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParPorApp.iOS", "ParPorApp\ParPorApp.iOS\ParPorApp.iOS.csproj", "{6353BD44-A631-44D6-B660-30103E47A2D8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile", "Mobile", "{7DADD7B6-D420-4C67-B2CA-D04C7A210FF5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{2529C6F0-BA57-45F3-B9BD-E130A37B1A1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

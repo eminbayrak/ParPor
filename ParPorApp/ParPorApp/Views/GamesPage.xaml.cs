@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace ParPorApp.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class GamesPage : ContentPage
-	{
-		public GamesPage ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class GamesPage : ContentPage
+    {
+        public GamesPage()
+        {
+            InitializeComponent();
+        }
+    }
 }

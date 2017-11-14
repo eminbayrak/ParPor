@@ -4,9 +4,9 @@
              x:Class="ParPorApp.Views.GamesPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <WebView Source="http://www.maxpreps.com/high-schools/princeton-vikings-(cincinnati,oh)/soccer/schedule.htm"
+                     HeightRequest="2000"
+                     WidthRequest="1000" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
