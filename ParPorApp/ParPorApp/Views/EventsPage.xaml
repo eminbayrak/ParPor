@@ -7,10 +7,18 @@
         <ListView x:Name="eventsListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Description}" TextColor="Black" />
-                    <TextCell Text="{Binding StartDateTime}" TextColor="Black" />
-                    <TextCell Text="{Binding EndDateTime}" TextColor="Black" />
-                    <TextCell Text="{Binding LocationId}" TextColor="Black" />
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Padding="20">
+                                <Image Source="logo" 
+                                       WidthRequest="100"
+                                       HeightRequest="100"/>
+                                <Label Text="{Binding Id}" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
+                                <Label Text="{Binding StartDateTime}" TextColor="Black"/>
+                                <Label Text="{Binding LocationId}" TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

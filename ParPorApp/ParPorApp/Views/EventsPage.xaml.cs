@@ -35,7 +35,7 @@ namespace ParPorApp.Views
     }
     public partial class EventsPage : ContentPage
     {
-        private const string Url = "http://localhost:55600/api/post";
+        private const string Url = "http://localhost:55600/api/events";
         private HttpClient _client = new HttpClient();
         private ObservableCollection<Event> _events;
 
