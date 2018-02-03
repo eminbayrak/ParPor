@@ -118,7 +118,6 @@ namespace ParPorApp.Services
 
 
             try
-
             {
                 var response = await client.SendAsync(request);
 
@@ -126,18 +125,19 @@ namespace ParPorApp.Services
 
                 //Acr.UserDialogs.UserDialogs.Instance.ShowError(await response.Content.ReadAsStringAsync());
 
+                if (!response.IsSuccessStatusCode)
+                {
+                    Debug.WriteLine(response);
+                    Debug.WriteLine(await response.Content.ReadAsStringAsync());
+                    Debug.WriteLine(response.StatusCode);
 
-                Debug.WriteLine(response);
-
-                Debug.WriteLine(await response.Content.ReadAsStringAsync());
-
-                Debug.WriteLine(response.StatusCode);
+                }
+                            
             }
 
             catch (Exception ex)
-
             {
-                //UserDialogs.Instance.ShowError(ex.Message);
+                Debug.WriteLine(ex);
             }
         }
     }
