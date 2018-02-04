@@ -14,7 +14,7 @@ namespace ParPorApp.ViewModels
     public class LoginViewModel
     {
         private ApiServices _apiServices = new ApiServices();
-        public string Email { get; set; }
+        public string Username { get; set; }
         public string Password { get; set; }
 
         public ICommand LoginCommand
@@ -23,24 +23,19 @@ namespace ParPorApp.ViewModels
             {
                 return new Command(async () =>
                 {
-                    
-                    await Task.Run(() =>
-                    {
-                        return _apiServices.LoginUserAsync(Email, Password);
-                    });
-                    await ExecuteLoginCommandAsync();
+                    var accesstoken = await _apiServices.LoginAsync(Username, Password);
+
+                    Settings.AccessToken = accesstoken;
                 });
             }
         }
 
-        async Task ExecuteLoginCommandAsync()
+        public LoginViewModel()
         {
-            // Simple authentication for now
-            bool loggedIn = true;
-
-            // Show the root tab controller
-            await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
+            Username = Settings.Username;
+            Password = Settings.Password;
         }
+
     }
 }
 

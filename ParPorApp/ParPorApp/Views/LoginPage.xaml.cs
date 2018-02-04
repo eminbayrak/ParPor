@@ -16,23 +16,24 @@ namespace ParPorApp.Views
     {
         public LoginPage()
         {
-            //InitializeComponent();
+            InitializeComponent();
             //EmailEntry.Completed += (object sender, EventArgs e) =>
             //{
             //    PasswordEntry.Focus();
             //};
             
-            Init();
+            //Init();
         }
+        //void Init()
+        //{
+        //    LogoIcon.HeightRequest = Constants.LogoIconHeight;
+        //}
         private async void NavigateToMainPage_OnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MainPage());
         }
 
-        void Init()
-        {
-            LogoIcon.HeightRequest = Constants.LogoIconHeight;
-        }
+        
     }
 
 }

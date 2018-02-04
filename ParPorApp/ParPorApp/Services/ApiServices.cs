@@ -10,135 +10,77 @@ using Acr.UserDialogs;
 using ParPorApp.Models;
 using Newtonsoft.Json;
 using Xamarin.Forms;
+using Newtonsoft.Json.Linq;
+using ParPorApp.Helpers;
 
 
 namespace ParPorApp.Services
 
 {
-    public class ApiServices
-
+    internal class ApiServices
     {
-        public async Task RegisterUserAsync(string email, string password, string confirmPassword)
-
+        public async Task<bool> RegisterUserAsync(
+            string email, string password, string confirmPassword)
         {
             var client = new HttpClient();
 
-            var success = false;
-
             var model = new RegisterBindingModel
-
             {
                 Email = email,
-
                 Password = password,
-
                 ConfirmPassword = confirmPassword
             };
 
-            //var json = JsonConvert.SerializeObject(model);
+            var json = JsonConvert.SerializeObject(model);
 
-            //HttpContent content = new StringContent(json);
+            HttpContent httpContent = new StringContent(json);
 
-            //content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            //var response = await client.PostAsync(
-            //    Constants.BaseApiAddress + "api/Account/Register", content);
+            var response = await client.PostAsync(
+                Constants.BaseApiAddress + "api/Account/Register", httpContent);
 
-            //Debug.WriteLine(response);
-
-            //Debug.WriteLine(await response.Content.ReadAsStringAsync());
-
-            //Debug.WriteLine(response.StatusCode);
-
-
-            try
-
+            if (response.IsSuccessStatusCode)
             {
-
-                var json = JsonConvert.SerializeObject(model);
-
-                HttpContent content = new StringContent(json);
-
-                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-
-                if (email != null || password != null)
-
-                {
-
-                    success = true;
-
-                    //Acr.UserDialogs.UserDialogs.Instance.ShowSuccess(string.Format("You are now signed-in as {0}.", email));
-
-                    var response = await client.PostAsync(
-
-                        Constants.BaseApiAddress + "api/Account/Register", content);
-
-                    Debug.WriteLine(response);
-
-                    Debug.WriteLine(await response.Content.ReadAsStringAsync());
-
-                    Debug.WriteLine(response.StatusCode);
-
-                }
-
+                return true;
             }
 
-            catch (Exception ex)
-
-            {
-
-                //Acr.UserDialogs.UserDialogs.Instance.ShowError(string.Format("Authentication Failed: {0}", ex.Message));
-
-            }
+            return false;
         }
 
 
         // Login user
-
-        public async Task LoginUserAsync(string email, string password)
-
+        public async Task<string> LoginAsync(string userName, string password)
         {
-            var client = new HttpClient();
-
             var keyValues = new List<KeyValuePair<string, string>>
-
             {
-                new KeyValuePair<string, string>("username", email),
-
+                new KeyValuePair<string, string>("username", userName),
                 new KeyValuePair<string, string>("password", password),
-
                 new KeyValuePair<string, string>("grant_type", "password")
             };
 
-
-            var request = new HttpRequestMessage(HttpMethod.Post, Constants.BaseApiAddress + "Token");
-
+            var request = new HttpRequestMessage(
+                HttpMethod.Post, Constants.BaseApiAddress + "Token");
 
             request.Content = new FormUrlEncodedContent(keyValues);
 
+            var client = new HttpClient();
+            var response = await client.SendAsync(request);
 
-            try
-            {
-                var response = await client.SendAsync(request);
+            var content = await response.Content.ReadAsStringAsync();
 
-                //UserDialogs.Instance.ShowSuccess("Logining...", 1500);
+            JObject jwtDynamic = JsonConvert.DeserializeObject<dynamic>(content);
 
-                //Acr.UserDialogs.UserDialogs.Instance.ShowError(await response.Content.ReadAsStringAsync());
+            var accessTokenExpiration = jwtDynamic.Value<DateTime>(".expires");
+            var accessToken = jwtDynamic.Value<string>("access_token");
 
-                if (!response.IsSuccessStatusCode)
-                {
-                    Debug.WriteLine(response);
-                    Debug.WriteLine(await response.Content.ReadAsStringAsync());
-                    Debug.WriteLine(response.StatusCode);
+            Settings.AccessTokenExpirationDate = accessTokenExpiration;
 
-                }
-                            
-            }
+            Debug.WriteLine(accessTokenExpiration);
 
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-            }
+            Debug.WriteLine(content);
+
+            return accessToken;
         }
     }
 }

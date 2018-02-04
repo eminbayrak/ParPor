@@ -34,7 +34,7 @@ namespace ParPorApp
             }
             else
             {
-                MainPage = new NavigationPage(new MainPage());
+                MainPage = new NavigationPage(new WelcomePage());
             }
         }
 
