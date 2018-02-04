@@ -16,13 +16,17 @@ namespace ParPorApp.Views
     {
         public LoginPage()
         {
-            InitializeComponent();
-            EmailEntry.Completed += (object sender, EventArgs e) =>
-            {
-                PasswordEntry.Focus();
-            };
+            //InitializeComponent();
+            //EmailEntry.Completed += (object sender, EventArgs e) =>
+            //{
+            //    PasswordEntry.Focus();
+            //};
             
             Init();
+        }
+        private async void NavigateToMainPage_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
         }
 
         void Init()
