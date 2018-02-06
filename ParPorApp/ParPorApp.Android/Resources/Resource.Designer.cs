@@ -63,8 +63,6 @@ namespace ParPorApp.Droid
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::ParPorApp.Droid.Resource.Styleable.ProgressWheel_ahText;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::ParPorApp.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::ParPorApp.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
-			global::Auth0.OidcClient.Resource.String.ApplicationName = global::ParPorApp.Droid.Resource.String.ApplicationName;
-			global::Auth0.OidcClient.Resource.String.Hello = global::ParPorApp.Droid.Resource.String.Hello;
 			global::Xamarin.Auth._MobileServices.Resource.Animation.slide_in_right = global::ParPorApp.Droid.Resource.Animation.slide_in_right;
 			global::Xamarin.Auth._MobileServices.Resource.Animation.slide_out_left = global::ParPorApp.Droid.Resource.Animation.slide_out_left;
 			global::Xamarin.Auth._MobileServices.Resource.Drawable.ic_arrow_back = global::ParPorApp.Droid.Resource.Drawable.ic_arrow_back;

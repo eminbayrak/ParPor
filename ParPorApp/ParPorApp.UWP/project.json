@@ -1,17 +1,19 @@
 ﻿{
   "dependencies": {
+    "IdentityModel": "2.6.0",
+    "IdentityModel.OidcClient": "2.1.2",
     "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.0.2",
     "Microsoft.Bcl.Async": "1.0.168",
     "Microsoft.Bcl.Build": "1.0.21",
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6",
     "Newtonsoft.Json": "10.0.3",
-    "SkiaSharp": "1.59.2",
+    "SkiaSharp": "1.59.3",
     "Xam.FormsPlugin.Iconize": "1.0.10",
-    "Xam.Plugin.Connectivity": "3.0.3",
+    "Xam.Plugin.Connectivity": "3.1.1",
     "Xam.Plugins.Forms.CachedImageCircle": "0.0.0.1",
-    "Xam.Plugins.Forms.ImageCircle": "1.8.1",
-    "Xam.Plugins.Settings": "3.1.1",
-    "Xamarin.Forms": "2.4.0.91020"
+    "Xam.Plugins.Forms.ImageCircle": "2.0.2",
+    "Xam.Plugins.Settings": "2.5.8",
+    "Xamarin.Forms": "2.5.0.122203"
   },
   "frameworks": {
     "uap10.0.10586": {}
