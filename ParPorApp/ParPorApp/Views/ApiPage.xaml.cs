@@ -23,7 +23,7 @@ namespace ParPorApp.Views
     public partial class ApiPage : ContentPage
     {
         private const string Url = "https://jsonplaceholder.typicode.com/posts";
-        //private const string Url = "http://localhost:55000/api/post";
+        //private const string Url = "http://localhost:55600/api/post";
         private HttpClient _client = new HttpClient();
         private ObservableCollection<Post> _posts;
         public ApiPage()

@@ -75,7 +75,6 @@ namespace ParPorApp.Droid
 			global::Xamarin.Auth._MobileServices.Resource.String.title_activity_webview = global::ParPorApp.Droid.Resource.String.title_activity_webview;
 			global::PCLCrypto.Resource.String.ApplicationName = global::ParPorApp.Droid.Resource.String.ApplicationName;
 			global::PCLCrypto.Resource.String.Hello = global::ParPorApp.Droid.Resource.String.Hello;
-			global::Splat.Resource.String.library_name = global::ParPorApp.Droid.Resource.String.library_name;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::ParPorApp.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -4140,11 +4139,11 @@ namespace ParPorApp.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f090040
-			public const int ApplicationName = 2131296320;
-			
 			// aapt resource value: 0x7f09003f
-			public const int Hello = 2131296319;
+			public const int ApplicationName = 2131296319;
+			
+			// aapt resource value: 0x7f09003e
+			public const int Hello = 2131296318;
 			
 			// aapt resource value: 0x7f090015
 			public const int abc_action_bar_home_description = 2131296277;
@@ -4248,8 +4247,8 @@ namespace ParPorApp.Droid
 			// aapt resource value: 0x7f090038
 			public const int character_counter_pattern = 2131296312;
 			
-			// aapt resource value: 0x7f09003e
-			public const int library_name = 2131296318;
+			// aapt resource value: 0x7f090041
+			public const int library_name = 2131296321;
 			
 			// aapt resource value: 0x7f090000
 			public const int mr_button_content_description = 2131296256;
@@ -4335,8 +4334,8 @@ namespace ParPorApp.Droid
 			// aapt resource value: 0x7f090029
 			public const int status_bar_notification_info_overflow = 2131296297;
 			
-			// aapt resource value: 0x7f090041
-			public const int title_activity_webview = 2131296321;
+			// aapt resource value: 0x7f090040
+			public const int title_activity_webview = 2131296320;
 			
 			static String()
 			{
