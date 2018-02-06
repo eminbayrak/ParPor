@@ -24,7 +24,7 @@
                         </OnIdiom.Tablet>
                     </OnIdiom>
                 </StackLayout.Padding>
-                <Entry x:Name="EmailEntry" Text="{Binding Email}" Placeholder="Email" Keyboard="Email"></Entry>
+                <Entry x:Name="EmailEntry" Text="{Binding Username}" Placeholder="Email" Keyboard="Email"></Entry>
                 <Entry x:Name="PasswordEntry" Text="{Binding Password}" Placeholder="Password" IsPassword="True"></Entry>
 
                 <Button Command="{Binding LoginCommand}" BorderWidth="2" BorderRadius="5" BorderColor="#cfefa7"

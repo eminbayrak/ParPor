@@ -35,7 +35,7 @@ namespace ParPorApp.Views
     }
     public partial class EventsPage : ContentPage
     {
-        private const string Url = "http://localhost:55600/api/events";
+        private const string Url = "http://parentportalapi.azurewebsites.net/api/events";
         private HttpClient _client = new HttpClient();
         private ObservableCollection<Event> _events;
 
