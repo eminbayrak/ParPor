@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParPorApp.Droid", "ParPorApp\ParPorApp.Android\ParPorApp.Droid.csproj", "{A7D4F3D0-2604-4C20-88AD-DF41EFDAA133}"
 EndProject
@@ -197,7 +197,8 @@ Global
 		{52943B49-15CD-4EB0-9FC7-EA84F7298952}.AppStore|x86.ActiveCfg = Release|x86
 		{52943B49-15CD-4EB0-9FC7-EA84F7298952}.AppStore|x86.Build.0 = Release|x86
 		{52943B49-15CD-4EB0-9FC7-EA84F7298952}.AppStore|x86.Deploy.0 = Release|x86
-		{52943B49-15CD-4EB0-9FC7-EA84F7298952}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{52943B49-15CD-4EB0-9FC7-EA84F7298952}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{52943B49-15CD-4EB0-9FC7-EA84F7298952}.Debug|Any CPU.Build.0 = Debug|x64
 		{52943B49-15CD-4EB0-9FC7-EA84F7298952}.Debug|ARM.ActiveCfg = Debug|ARM
 		{52943B49-15CD-4EB0-9FC7-EA84F7298952}.Debug|ARM.Build.0 = Debug|ARM
 		{52943B49-15CD-4EB0-9FC7-EA84F7298952}.Debug|ARM.Deploy.0 = Debug|ARM

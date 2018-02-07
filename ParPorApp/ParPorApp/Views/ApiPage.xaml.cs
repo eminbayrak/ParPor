@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
+using ParPorApp.Helpers;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -22,9 +23,10 @@ namespace ParPorApp.Views
 
     public partial class ApiPage : ContentPage
     {
-        private const string Url = "https://jsonplaceholder.typicode.com/posts";
-        //private const string Url = "http://localhost:55600/api/post";
-        private HttpClient _client = new HttpClient();
+        //private const string Url = "https://jsonplaceholder.typicode.com/posts";
+        private const string Url = "http://localhost:55600/api/Groups";
+        private HttpClient client = new HttpClient();
+        //client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
         private ObservableCollection<Post> _posts;
         public ApiPage()
         {
@@ -33,7 +35,7 @@ namespace ParPorApp.Views
 
         protected override async void OnAppearing()
         {
-            var content = await _client.GetStringAsync(Url);
+            var content = await client.GetStringAsync(Url);
             var posts = JsonConvert.DeserializeObject<List<Post>>(content);
             _posts = new ObservableCollection<Post>(posts);
             postsListView.ItemsSource = _posts;

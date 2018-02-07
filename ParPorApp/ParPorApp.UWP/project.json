@@ -1,10 +1,11 @@
 ﻿{
   "dependencies": {
-    "IdentityModel": "2.6.0",
-    "IdentityModel.OidcClient": "2.1.2",
+    "IdentityModel": "3.0.0",
+    "IdentityModel.OidcClient": "2.4.0",
     "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.0.2",
     "Microsoft.Bcl.Async": "1.0.168",
     "Microsoft.Bcl.Build": "1.0.21",
+    "Microsoft.Net.Http": "2.2.29",
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6",
     "Newtonsoft.Json": "10.0.3",
     "SkiaSharp": "1.59.3",

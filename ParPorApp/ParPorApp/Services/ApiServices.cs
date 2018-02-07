@@ -56,7 +56,7 @@ namespace ParPorApp.Services
             };
 
             var request = new HttpRequestMessage(
-                HttpMethod.Post, Constants.BaseApiAddress + "Token");
+                HttpMethod.Post, Constants.BaseApiAddress + "Token/");
 
             request.Content = new FormUrlEncodedContent(keyValues);
 
@@ -77,6 +77,20 @@ namespace ParPorApp.Services
             Debug.WriteLine(content);
 
             return accessToken;
+        }
+
+        // get group list
+        public async Task<List<Group>> GetGroupsAsync(string accessToken)
+        {
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
+                "Bearer", accessToken);
+
+            var json = await client.GetStringAsync(Constants.BaseApiAddress + "api/group");
+
+            var group = JsonConvert.DeserializeObject<List<Group>>(json);
+
+            return group;
         }
     }
 }
