@@ -23,12 +23,14 @@ namespace ParPorApp.ViewModels
             {
                 return new Command(async () =>
                 {
-                    var accesstoken = await _apiServices.LoginAsync(Username, Password);
+                    var accesstoken = await ApiServices.LoginAsync(Username, Password);
 
                     Settings.AccessToken = accesstoken;
                 });
             }
         }
+
+        internal ApiServices ApiServices { get => _apiServices; set => _apiServices = value; }
 
         public LoginViewModel()
         {

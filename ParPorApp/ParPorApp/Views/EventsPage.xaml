@@ -1,26 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ParPorApp.Views.EventsPage">
-    <StackLayout>
-        <StackLayout Orientation="Horizontal"/>
-        <ListView x:Name="eventsListView">
+             xmlns:viewModels="clr-namespace:ParPorApp.ViewModels;assembly=ParPorApp"
+             x:Class="ParPorApp.Views.EventsPage"
+             Title="Events">
+
+    <ContentPage.BindingContext>
+        <viewModels:EventsViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout"
+                     Command="{Binding LogoutCommand}"
+                     Clicked="LogoutMenuItem_Clicked"
+                     Priority="1"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Padding="20">
+        <ListView ItemsSource="{Binding Events}"
+                  HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <ViewCell.View>
-                            <StackLayout Padding="20">
-                                <Image Source="logo" 
-                                       WidthRequest="100"
-                                       HeightRequest="100"/>
-                                <Label Text="{Binding Id}" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
-                                <Label Text="{Binding StartDateTime}" TextColor="Black"/>
-                                <Label Text="{Binding LocationId}" TextColor="Black" />
-                            </StackLayout>
-                        </ViewCell.View>
+                        <StackLayout Padding="0,10">
+                            <Label Text="{Binding Description}"
+                                   FontSize="24"
+                                   TextColor="RoyalBlue" />
+                            <Label Text="{Binding StartDateTime}" />
+                            <Label Text="{Binding GroupId}" />
+                            <Label Text="{Binding LocationId}" />
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
+
 </ContentPage>

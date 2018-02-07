@@ -40,6 +40,7 @@
     </Compile>
     <Compile Include="Constants.cs" />
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Models\Events.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\RegisterBindingModel.cs" />
@@ -49,6 +50,7 @@
     <Compile Include="Services\ApiServices.cs" />
     <Compile Include="Services\GroupsServices.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\EventsViewModel.cs" />
     <Compile Include="ViewModels\Group.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\User.cs" />
@@ -274,9 +276,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="_client\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

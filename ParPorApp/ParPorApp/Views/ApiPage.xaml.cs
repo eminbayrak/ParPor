@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Net.Http;
-using ParPorApp.Helpers;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
-using ParPorApp.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -23,8 +17,8 @@ namespace ParPorApp.Views
 
     public partial class ApiPage : ContentPage
     {
-        //private const string Url = "https://jsonplaceholder.typicode.com/posts";
-        private const string Url = "http://localhost:55600/api/Groups";
+        private const string Url = "https://jsonplaceholder.typicode.com/posts";
+        //private const string Url = "http://localhost:55600/api/Groups";
         private HttpClient client = new HttpClient();
         //client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
         private ObservableCollection<Post> _posts;
