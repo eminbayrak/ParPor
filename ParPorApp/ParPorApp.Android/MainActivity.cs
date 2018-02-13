@@ -7,7 +7,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace ParPorApp.Droid
 {
-    [Activity(Label = "ParPorApp", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true,
+    [Activity(Label = "ParPorApp", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = false,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : FormsAppCompatActivity
     {
@@ -18,7 +18,7 @@ namespace ParPorApp.Droid
             
 
             base.OnCreate(bundle);
-
+            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
             Forms.Init(this, bundle);
             CurrentPlatform.Init();
             LoadApplication(new App());

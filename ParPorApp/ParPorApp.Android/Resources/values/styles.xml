@@ -39,12 +39,16 @@
 
     <!-- You can also set colorControlNormal, colorControlActivated
 
-         colorControlHighlight and colorSwitchThumbNormal. -->
+         colorControlHighlight and colorSwitchThumbNormal. 
+         Hamburger burron color-->
+    <item name="drawerArrowStyle">@style/DrawerIcon</item>
 
     <item name="windowActionModeOverlay">true</item>
 
 
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+
+    
 
   </style>
 
@@ -53,5 +57,15 @@
     <item name="colorAccent">#FF4081</item>
 
   </style>
+  <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
+    <item name="color">@android:color/black</item>
+  </style>
+  <style name="LaunchTheme" parent="Theme.AppCompat.NoActionBar">
+    <item name="windowActionModeOverlay">true</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowBackground">@drawable/LaunchView</item>
+    <item name="android:statusBarColor">@android:color/transparent</item>
+  </style>
+  
 
 </resources>

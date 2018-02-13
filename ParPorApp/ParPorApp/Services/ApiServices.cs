@@ -1,9 +1,14 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using Microsoft.WindowsAzure.MobileServices;
+using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
+using Microsoft.WindowsAzure.MobileServices.Sync;
 using ParPorApp.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -106,5 +111,30 @@ namespace ParPorApp.Services
 
             return events;
         }
+
+        //public class AzureDataService
+        //{
+        //    public MobileServiceClient MobileService { get; set; }
+        //    private IMobileServiceSyncTable eventTable;
+
+        //    public async Task Initialize()
+        //    {
+        //        MobileService = new MobileServiceClient("https://parentportal.azurewebsites.net");
+        //        const string path = "syncstore.db";
+        //        //setup local sqlite store and init
+        //        var store = new MobileServiceSQLiteStore(path);
+        //        store.DefineTable();
+        //        await MobileService.SyncContext.InitializeAsync(store, new MobileServiceSyncHandler());
+        //        //get sync table that will call out azure
+        //        eventTable = MobileService.GetSyncTable();
+
+        //    }
+
+        //    public async Task SyncEvent()
+        //    {
+        //        await eventTable.PullAsync("allEvents", eventTable.CreateQuery());
+        //        await MobileService.SyncContext.PushAsync();
+        //    }
+        //}
     }
 }

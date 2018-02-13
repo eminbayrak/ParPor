@@ -10,6 +10,7 @@ namespace ParPorApp.iOS
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
     [Register("AppDelegate")]
+
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         //
@@ -23,6 +24,8 @@ namespace ParPorApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             var tint = UIColor.FromRGB(30, 142, 128);
+            Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
+           
             UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(242, 197, 0); //bar background
             UINavigationBar.Appearance.TintColor = tint; //Tint color of button items
             UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes
@@ -71,8 +74,6 @@ namespace ParPorApp.iOS
 
 
         }
-            
-
 
         public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
         {

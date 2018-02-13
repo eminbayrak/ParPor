@@ -14,6 +14,9 @@
                 <Setter Property="BarBackgroundColor" Value="{StaticResource Accent}" />
                 <Setter Property="BarTextColor" Value="Black" />
             </Style>
+            <Style TargetType="TabbedPage">
+                <Setter Property="BarTextColor" Value="Black" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

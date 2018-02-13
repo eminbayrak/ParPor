@@ -34,6 +34,7 @@ namespace ParPorApp.Views
 
                 MenuItems = new ObservableCollection<MainPageMenuItem>(new[]
                 {
+
                     new MainPageMenuItem { Id = 0, Title = "My Group", Icon = "ic_meetup", TargetType=typeof(GroupPage)},
                     new MainPageMenuItem { Id = 1, Title = "Social", Icon = "ic_meetup", TargetType=typeof(SocialPage)},
                     new MainPageMenuItem { Id = 2, Title = "Events", Icon = "ic_meetup", TargetType=typeof(ApiPage) },
