@@ -13,13 +13,16 @@
     <ListView.ItemTemplate>
         <DataTemplate>
                 <ViewCell>
-                    <StackLayout Orientation="Horizontal" Padding="5">
+                    <StackLayout Orientation="Horizontal" Padding="20">
                         <abstractions:CircleImage
                             Source="{Binding ImageUrl}"
                             WidthRequest="55"
-                            HeightRequest="55"/>
+                            HeightRequest="55"
+                            BorderColor="#3498DB"
+                            BorderThickness="2"
+                            Aspect="AspectFill"/>
                         <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Center">
-                            <Label Text="{Binding Name}"/>
+                            <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold"/>
                             <Label Text="{Binding Description}"/>
                         </StackLayout>
                     </StackLayout>

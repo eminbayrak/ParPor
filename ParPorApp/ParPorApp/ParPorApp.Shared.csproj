@@ -113,6 +113,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="CardView, Version=1.1.1.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XamarinForms.CardView.1.1.1.5\lib\portable45-net45+win8+wp8+wpa81\CardView.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Xamarin, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\FontAwesome.Xamarin.4.0.3.0\lib\FontAwesome.Xamarin.dll</HintPath>
     </Reference>
@@ -298,7 +301,6 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

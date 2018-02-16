@@ -31,6 +31,7 @@ namespace ParPorApp.Views
     
     public partial class GroupPage : ContentPage
     {
+
         //private const string Url = "http://localhost:55000/api/groups";
         //private HttpClient _client = new HttpClient();
         //private ObservableCollection<ApiGroup> _groups;
@@ -43,14 +44,14 @@ namespace ParPorApp.Views
 
             groupView.ItemsSource = new List<Group>
             {
-                new Group{ Name = "Ashley O'Toole", ImageUrl = "princetonSoccer", Description = "Main O'Toole's parent", Phone = "555-555-5555", Email = "ashley@mail.com"},
-                new Group{ Name = "Andrue Stephen", ImageUrl = "princetonSoccer", Description = "Carlie Stephen's parent", Phone = "555-555-5555", Email = "andrue@mail.com"},
-                new Group{ Name = "Alexis Alper", ImageUrl = "princetonSoccer", Description = "Addison Alper's parent", Phone = "555-555-5555", Email = "alexis@mail.com"},
-                new Group{ Name = "Rhonda Shay", ImageUrl = "princetonSoccer", Description = "Caitlyn Shay's parent", Phone = "555-555-5555", Email = "rhonda@mail.com"},
-                new Group{ Name = "Catherine Mason", ImageUrl = "princetonSoccer", Description = "Allison's parent", Phone = "555-555-5555", Email = "catherine@mail.com"},
-                new Group{ Name = "Elise Wene", ImageUrl = "princetonSoccer", Description = "Grace Wene's parent", Phone = "555-555-5555", Email = "kacey@mail.com"},
-                new Group{ Name = "Hannah Kemen", ImageUrl = "princetonSoccer", Description = "Haley Kemen's parent", Phone = "555-555-5555", Email = "hannah@mail.com"},
-                new Group{ Name = "Kacey Bail", ImageUrl = "princetonSoccer", Description = "Charlie Steven's parent", Phone = "555-555-5555", Email = "kacey@mail.com"}
+                new Group{ Name = "Ashley O'Toole", ImageUrl = "https://ui-avatars.com/api/?background=c357&color=fff&name=A+O", Description = "Main O'Toole's parent", Phone = "555-555-5555", Email = "ashley@mail.com"},
+                new Group{ Name = "Andrue Stephen", ImageUrl = "https://ui-avatars.com/api/?background=a457&color=ffff&name=A+S", Description = "Carlie Stephen's parent", Phone = "555-555-5555", Email = "andrue@mail.com"},
+                new Group{ Name = "Alexis Alper", ImageUrl = "https://ui-avatars.com/api/?background=2267&color=ffff&name=A+A", Description = "Addison Alper's parent", Phone = "555-555-5555", Email = "alexis@mail.com"},
+                new Group{ Name = "Rhonda Shay", ImageUrl = "https://ui-avatars.com/api/?background=6737&color=ffff&name=R+S", Description = "Caitlyn Shay's parent", Phone = "555-555-5555", Email = "rhonda@mail.com"},
+                new Group{ Name = "Catherine Mason", ImageUrl = "https://ui-avatars.com/api/?background=c334&color=ffff&name=C+M", Description = "Allison's parent", Phone = "555-555-5555", Email = "catherine@mail.com"},
+                new Group{ Name = "Elise Wene", ImageUrl = "https://ui-avatars.com/api/?background=e461&color=ffff&name=E+W", Description = "Grace Wene's parent", Phone = "555-555-5555", Email = "kacey@mail.com"},
+                new Group{ Name = "Hannah Kemen", ImageUrl = "https://ui-avatars.com/api/?background=4654&color=ffff&name=H+K", Description = "Haley Kemen's parent", Phone = "555-555-5555", Email = "hannah@mail.com"},
+                new Group{ Name = "Kacey Bail", ImageUrl = "https://ui-avatars.com/api/?background=f2d1&color=ffff&name=K+B", Description = "Charlie Steven's parent", Phone = "555-555-5555", Email = "kacey@mail.com"}
             };
             base.OnAppearing();
         }

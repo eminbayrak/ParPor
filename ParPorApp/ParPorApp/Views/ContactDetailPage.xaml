@@ -1,19 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              x:Class="ParPorApp.Views.ContactDetailPage"
              Title="{Binding Name}">
-    <ContentPage.Content>
+    <!--<ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
-                <Image
-                    x:Name="Image"
-                    WidthRequest="125"
-                    HeightRequest="125"
+            <abstractions:CircleImage
+                    WidthRequest="180"
+                    HeightRequest="180"
                     Source="{Binding ImageUrl}" />
                 <Label Text="{Binding Name}"/>
                 <Label Text="{Binding Description}"/>
                 <Label Text="{Binding Phone}"/>
                 <Label Text="{Binding Email}"/>
             </StackLayout>
+    </ContentPage.Content>-->
+    <ContentPage.Content>
+        <Grid Padding="5" HeightRequest="50" VerticalOptions="Start" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto">
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30">
+                </ColumnDefinition>
+                <ColumnDefinition Width="100">
+                </ColumnDefinition>
+                <ColumnDefinition Width="*">
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.Children>
+                <Image Source="{Binding ImageUrl}" Grid.Row="0">
+                </Image>
+                <Label Text="{Binding Name}"  Grid.Column="1" FontSize="14" FontAttributes="Bold" VerticalOptions="Center">
+                </Label>
+                <StackLayout Spacing="2" Grid.Column="2" VerticalOptions="Center">
+                    <Label Text="{Binding Description}" FontSize="14">
+                    </Label>
+                    <Label Text="{Binding Phone}" FontSize="12" TextColor="#5D5D5D">
+                    </Label>
+                    
+                </StackLayout>
+            </Grid.Children>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

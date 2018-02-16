@@ -1,9 +1,40 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
              x:Class="ParPorApp.Views.MainPageDetail"
              Title="Detail">
-  <StackLayout Padding="10">
-    <Label Text="This is a detail page. To get the 'triple' line icon on each platform add a icon to each platform and update the 'Master' page with an Icon that references it."/>
-  </StackLayout>
+    <ContentPage.ToolbarItems>
+        <iconize:IconToolbarItem Icon="fa-calendar"
+                                 Command="{Binding LogoutCommand}"
+
+                                 Priority="1" />
+    </ContentPage.ToolbarItems>
+    <StackLayout Orientation="Vertical" BackgroundColor="#F2F2F2">
+
+
+        <Frame Margin="10" BackgroundColor="White" HasShadow="True" Padding="7">
+            <iconize:IconImage Icon="fa-archive" />
+            <Label Margin="10" TextColor="Black"
+                   Text="Yes I am already doing that. But there doesn't seem to be a way to change the height or width of the frame. when I adjust the height of a frame it causes my DatePicker to disappear from the frame." />
+        </Frame>
+        <Frame Margin="10" BackgroundColor="White" HasShadow="True" Padding="7">
+
+            <Label Margin="10" TextColor="Black"
+                   Text="Yes I am already doing that. But there doesn't seem to be a way to change the height or width of the frame. when I adjust the height of a frame it causes my DatePicker to disappear from the frame." />
+        </Frame>
+        <Frame Margin="10" BackgroundColor="White" HasShadow="True" Padding="7">
+
+            <Label Margin="10" TextColor="Black"
+                   Text="Yes I am already doing that. But there doesn't seem to be a way to change the height or width of the frame. when I adjust the height of a frame it causes my DatePicker to disappear from the frame." />
+        </Frame>
+        <Frame Margin="10" BackgroundColor="White" HasShadow="True" Padding="7">
+
+            <Label Margin="10" TextColor="Black"
+                   Text="Yes I am already doing that. But there doesn't seem to be a way to change the height or width of the frame. when I adjust the height of a frame it causes my DatePicker to disappear from the frame." />
+        </Frame>
+
+
+    </StackLayout>
 </ContentPage>

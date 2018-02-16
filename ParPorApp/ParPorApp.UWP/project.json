@@ -1,21 +1,28 @@
 ﻿{
   "dependencies": {
-    "IdentityModel": "3.0.0",
+    "FontAwesome": "4.7.0",
+    "IdentityModel": "3.1.0",
     "IdentityModel.OidcClient": "2.4.0",
     "Microsoft.Azure.Mobile.Client": "4.0.2",
     "Microsoft.Azure.Mobile.Client.SQLiteStore": "4.0.2",
     "Microsoft.Bcl.Async": "1.0.168",
     "Microsoft.Bcl.Build": "1.0.21",
+    "Microsoft.IdentityModel.Logging": "5.2.1",
+    "Microsoft.IdentityModel.Tokens": "5.2.1",
     "Microsoft.Net.Http": "2.2.29",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.6",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.7",
     "Newtonsoft.Json": "10.0.3",
     "SkiaSharp": "1.59.3",
+    "System.IdentityModel.Tokens.Jwt": "5.2.1",
+    "System.Threading.Tasks.Parallel": "4.3.0",
     "Xam.FormsPlugin.Iconize": "1.0.10",
     "Xam.Plugin.Connectivity": "3.1.1",
+    "Xam.Plugin.Iconize": "1.0.10",
     "Xam.Plugins.Forms.CachedImageCircle": "0.0.0.1",
     "Xam.Plugins.Forms.ImageCircle": "2.0.2",
     "Xam.Plugins.Settings": "2.5.8",
-    "Xamarin.Forms": "2.5.0.122203"
+    "Xamarin.Forms": "2.5.0.122203",
+    "XamarinForms.CardView": "1.1.1.5"
   },
   "frameworks": {
     "uap10.0.10586": {}

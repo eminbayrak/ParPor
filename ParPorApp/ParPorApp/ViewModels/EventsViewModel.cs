@@ -16,7 +16,7 @@ namespace ParPorApp.ViewModels
     {
         private readonly ApiServices _apiServices = new ApiServices();
         private List<Events> _events;
-        private ObservableCollection<Events> _posts;
+        //private ObservableCollection<Events> _posts;
         //public string AccessToken { get; set; }
         public List<Events> Events
         {

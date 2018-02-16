@@ -18,7 +18,7 @@ namespace ParPorApp.Views
             
             Children.Add(new LatestPage() { Title = "Events"});
             Children.Add(new TablePage() { Title = "Table" });
-            Children.Add(new GamesPage() { Title = "Games" });
+            Children.Add(new GamesPage() { Title = "Newsfeed" });
             
         }
     }

@@ -22,6 +22,7 @@ namespace ParPorApp.Droid
             Forms.Init(this, bundle);
             CurrentPlatform.Init();
             LoadApplication(new App());
+            //Plugin.Iconize.Droid.IconControls.Init(Resource.Id.toolbar, Resource.Id.tabs);
             Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule());
 
         }

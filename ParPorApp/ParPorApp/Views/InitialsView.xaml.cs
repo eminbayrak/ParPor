@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using SkiaSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace ParPorApp.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class InitialsView : ContentView
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class InitialsView : ContentView
     {
         const float TextOffset = 1.25f;
 
@@ -87,4 +87,3 @@ namespace ParPorApp.Views
 
         #endregion
     }
-}
