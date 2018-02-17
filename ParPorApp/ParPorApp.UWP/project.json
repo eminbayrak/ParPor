@@ -20,8 +20,8 @@
     "Xam.Plugin.Iconize": "1.0.10",
     "Xam.Plugins.Forms.CachedImageCircle": "0.0.0.1",
     "Xam.Plugins.Forms.ImageCircle": "2.0.2",
-    "Xam.Plugins.Settings": "2.5.8",
-    "Xamarin.Forms": "2.5.0.122203",
+    "Xam.Plugins.Settings": "3.1.1",
+    "Xamarin.Forms": "2.5.0.280555",
     "XamarinForms.CardView": "1.1.1.5"
   },
   "frameworks": {

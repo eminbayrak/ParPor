@@ -28,8 +28,8 @@
             <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True"/>
             <Entry Text="{Binding ConfirmPassword}" Placeholder="ConfirmPassword" IsPassword="True"/>
 
-            <Button Command="{Binding RegisterCommand}" BorderWidth="2" BorderRadius="5" BorderColor="#cfefa7"
-                    BackgroundColor="#cfefa7" TextColor="White" Text="Sign up">
+            <Button Command="{Binding RegisterCommand}" BorderWidth="2" BorderRadius="5" BorderColor="#D96771"
+                    BackgroundColor="#D96771" TextColor="White" Text="Sign up">
             </Button>
 
             <Button Text="Go to Login" BackgroundColor="#F1836E" TextColor="White" Clicked="Button_OnClicked"></Button>

@@ -32,11 +32,11 @@ namespace ParPorApp.Helpers
     {
       get
       {
-        return AppSettings.GetValueOrDefault<string>(SettingsKey, SettingsDefault);
+        return AppSettings.GetValueOrDefault(SettingsKey, SettingsDefault);
       }
       set
       {
-        AppSettings.AddOrUpdateValue<string>(SettingsKey, value);
+        AppSettings.AddOrUpdateValue(SettingsKey, value);
       }
     }
 
@@ -44,33 +44,33 @@ namespace ParPorApp.Helpers
         {
             get
             {
-                return AppSettings.GetValueOrDefault<string>("Username", "");
+                return AppSettings.GetValueOrDefault("Username", "");
             }
             set
             {
-                AppSettings.AddOrUpdateValue<string>("Username", value);
+                AppSettings.AddOrUpdateValue("Username", value);
             }
         }
         public static string Password
         {
             get
             {
-                return AppSettings.GetValueOrDefault<string>("Password", "");
+                return AppSettings.GetValueOrDefault("Password", "");
             }
             set
             {
-                AppSettings.AddOrUpdateValue<string>("Password", value);
+                AppSettings.AddOrUpdateValue("Password", value);
             }
         }
         public static string AccessToken
         {
             get
             {
-                return AppSettings.GetValueOrDefault<string>("AccessToken", "");
+                return AppSettings.GetValueOrDefault("AccessToken", "");
             }
             set
             {
-                AppSettings.AddOrUpdateValue<string>("AccessToken", value);
+                AppSettings.AddOrUpdateValue("AccessToken", value);
             }
         }
 
@@ -78,11 +78,11 @@ namespace ParPorApp.Helpers
         {
             get
             {
-                return AppSettings.GetValueOrDefault<DateTime>("AccessTokenExpirationDate", DateTime.UtcNow);
+                return AppSettings.GetValueOrDefault("AccessTokenExpirationDate", DateTime.UtcNow);
             }
             set
             {
-                AppSettings.AddOrUpdateValue<DateTime>("AccessTokenExpirationDate", value);
+                AppSettings.AddOrUpdateValue("AccessTokenExpirationDate", value);
             }
         }
 

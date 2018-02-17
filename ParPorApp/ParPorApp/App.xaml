@@ -3,8 +3,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">Black</Color>
-            <Color x:Key="PrimaryDark">#354b60</Color>
-            <Color x:Key="Accent">#cfefa7</Color>
+            <Color x:Key="PrimaryDark">#B24548</Color>
+            <Color x:Key="Accent">#D96771</Color>
             <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
             <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
             <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
