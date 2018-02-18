@@ -27,8 +27,7 @@
                 <Entry x:Name="EmailEntry" Text="{Binding Username}" Placeholder="Email" Keyboard="Email"></Entry>
                 <Entry x:Name="PasswordEntry" Text="{Binding Password}" Placeholder="Password" IsPassword="True"></Entry>
 
-                <Button Command="{Binding LoginCommand}" BorderColor="#D96771"
-                        BackgroundColor="#B24548" TextColor="White" Text="Login">
+                <Button Command="{Binding LoginCommand}" Style="{StaticResource FollowButton}" Text="Login">
                 </Button>
                 <Label x:Name="messageLabel" />
             </StackLayout>

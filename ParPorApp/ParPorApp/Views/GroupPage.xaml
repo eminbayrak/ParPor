@@ -18,7 +18,7 @@
                             Source="{Binding ImageUrl}"
                             WidthRequest="55"
                             HeightRequest="55"
-                            BorderColor="#3498DB"
+                            BorderColor="#C0C0C0"
                             BorderThickness="2"
                             Aspect="AspectFill"/>
                         <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Center">

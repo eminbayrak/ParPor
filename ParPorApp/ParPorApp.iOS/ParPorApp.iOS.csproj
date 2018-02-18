@@ -94,6 +94,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="RestClient\RestClient.cs" />
     <Compile Include="RestClient\TaskModel.cs" />
+    <BundleResource Include="Resources\HeaderCurved.png" />
     <None Include="app.config" />
     <None Include="Entitlements.plist" />
     <Content Include="fonts\fontawesome-webfont.eot" />
@@ -106,6 +107,7 @@
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork@2x" />
     <None Include="packages.config" />
+    <BundleResource Include="Resources\CurvedMaskpng" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />

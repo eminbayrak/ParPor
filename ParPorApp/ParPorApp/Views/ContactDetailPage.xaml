@@ -2,76 +2,70 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              x:Class="ParPorApp.Views.ContactDetailPage"
              Title="Profile Details">
-    <!--<ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
-            <abstractions:CircleImage
-                    WidthRequest="180"
-                    HeightRequest="180"
-                    Source="{Binding ImageUrl}" />
-                <Label Text="{Binding Name}"/>
-                <Label Text="{Binding Description}"/>
-                <Label Text="{Binding Phone}"/>
-                <Label Text="{Binding Email}"/>
+    <ScrollView>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="AUTO" />
+            </Grid.RowDefinitions>
+
+            <!--  header background  -->
+            <Image Aspect="AspectFill" Source="HeaderCurved.png" />
+            <Image Aspect="Fill" Margin="0,-1,0,-1" Source="CurvedMask.png" VerticalOptions="End" />
+
+            <!--  profile image  -->
+            <abstractions:CircleImage Grid.Row="0" 
+                                      BorderColor="#C0C0C0"
+                                      BorderThickness="2"
+                                      HeightRequest="100" 
+                                      HorizontalOptions="Center" 
+                                      Source="{Binding ImageUrl}" 
+                                      TranslationY="50" 
+                                      VerticalOptions="End" 
+                                      WidthRequest="100" />
+
+            <!--  Profile Name  -->
+            <StackLayout Grid.Row="1" Padding="0,50,0,00" HorizontalOptions="Center">
+                <Label Style="{StaticResource ProfileNameLabel}" Text="{Binding Name}" />
+                <Label Margin="0,-5" Style="{StaticResource ProfileTagLabel}" Text="{Binding Description}" />
             </StackLayout>
-    </ContentPage.Content>-->
-    <ContentPage.BackgroundColor>
-        <OnPlatform x:TypeArguments="Color"
-                    Android="#F5F5F5" />
-    </ContentPage.BackgroundColor>
-    <ContentPage.Content>
-        <ListView
-            SeparatorColor="Transparent"
-            Grid.ColumnSpan="3"
-            Grid.Row="5"
-            HasUnevenRows="true"
-            x:Name="ListViewMenu">
-            <ListView.Header>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="10" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="10" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="30" />
-                        <RowDefinition Height="80" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="5" />
-                    </Grid.RowDefinitions>
-                    <BoxView Grid.ColumnSpan="3"
-                             Grid.RowSpan="5"
-                             BackgroundColor="#DC6770" />
-                    <controls:CircleImage
-                        Grid.Column="1"
-                        Grid.Row="1"
-                        BorderColor="White"
-                        BorderThickness="1"
-                        HorizontalOptions="Center"
-                        VerticalOptions="End"
-                        Source="{Binding ImageUrl}"
-                        WidthRequest="75" HeightRequest="75" />
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="2"
-                        HorizontalOptions="Center"
-                        FontSize="Large"
-                        Text="{Binding Name}"
-                        TextColor="White"
-                        Style="{DynamicResource TitleStyle}" />
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="4"
-                        HorizontalOptions="Center"
-                        Text="{Binding Description}"
-                        Style="{DynamicResource SubtitleStyle}" />
-                </Grid>
-            </ListView.Header>
-            
-        </ListView>
-    </ContentPage.Content>
+
+            <!--  Social Stats Section  -->
+            <Grid Grid.Row="2" Margin="0,30" ColumnSpacing="0" RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout>
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="33" />
+                    <Label Style="{StaticResource StatsCaptionLabel}" Text="Likes" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="1">
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="94" />
+                    <Label Style="{StaticResource StatsCaptionLabel}" Text="Following" />
+                </StackLayout>
+
+                <StackLayout Grid.Column="2">
+                    <Label Style="{StaticResource StatsNumberLabel}" Text="957" />
+                    <Label Style="{StaticResource StatsCaptionLabel}" Text="Followers" />
+                </StackLayout>
+            </Grid>
+
+            <!--  profile description  -->
+            <Label Margin="20,0" Grid.Row="3" Style="{StaticResource MainBodyLabel}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada ultricies arcu nec egestas. Nam porta fermentum aliquam. Nullam tincidunt odio purus." />
+
+            <!--  follow button  -->
+            <Button Grid.Row="4" Margin="20" Style="{StaticResource FollowButton}" Text="Send Message" />
+
+        </Grid>
+    </ScrollView>
 </ContentPage>

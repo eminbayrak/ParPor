@@ -90,6 +90,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="Assets\CurvedMaskpng" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +111,7 @@
   <ItemGroup>
     <AndroidResource Include="Assets\logo.png" />
     <AndroidResource Include="Assets\princetonSoccer.png" />
+    <Content Include="Assets\HeaderCurved.png" />
     <Content Include="Assets\ic_parporlogo.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24.png" />

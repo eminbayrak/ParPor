@@ -335,6 +335,7 @@
     <AndroidResource Include="Resources\drawable\LaunchView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <Content Include="Resources\drawable\CurvedMask.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
@@ -367,6 +368,7 @@
   <ItemGroup>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <AndroidResource Include="Resources\drawable\HeaderCurved.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
