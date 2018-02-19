@@ -32,10 +32,10 @@ namespace ParPorApp.Views
             public MainPageMasterViewModel() => MenuItems = new ObservableCollection<MainPageMenuItem>(new[]
             {
 
-                new MainPageMenuItem { Id = 0, Title = "My Group", TargetType=typeof(GroupPage)},
+                new MainPageMenuItem { Id = 0, Title = "My Groups", TargetType=typeof(GroupPage)},
                 new MainPageMenuItem { Id = 1, Title = "Social", TargetType=typeof(SocialPage)},
-                new MainPageMenuItem { Id = 2, Title = "Events", TargetType=typeof(ApiPage) },
-                new MainPageMenuItem { Id = 3, Title = "Schedule", TargetType=typeof(EventsPage) },
+                new MainPageMenuItem { Id = 2, Title = "DummyAPI", TargetType=typeof(ApiPage) },
+                new MainPageMenuItem { Id = 3, Title = "Events", TargetType=typeof(EventsPage) },
             });
 
             #region INotifyPropertyChanged Implementation

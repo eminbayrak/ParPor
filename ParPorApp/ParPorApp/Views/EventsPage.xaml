@@ -16,6 +16,8 @@
                      Priority="1"/>
     </ContentPage.ToolbarItems>
     <StackLayout Padding="20">
+        <Entry Text="{Binding AccessToken}"/>
+        <Button Command="{Binding GetEventsCommand}" Text="All Events"/>
         <ListView ItemsSource="{Binding Events}"
                   HasUnevenRows="True">
             <ListView.ItemTemplate>

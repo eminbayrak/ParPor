@@ -7,6 +7,7 @@ using System.Windows.Input;
 using ParPorApp.Helpers;
 using ParPorApp.Services;
 using ParPorApp.Views;
+using SkiaSharp;
 using Xamarin.Forms;
 
 namespace ParPorApp.ViewModels
@@ -24,8 +25,9 @@ namespace ParPorApp.ViewModels
                 return new Command(async () =>
                 {
                     var accesstoken = await ApiServices.LoginAsync(Username, Password);
-
+                    
                     Settings.AccessToken = accesstoken;
+                    
                 });
             }
         }

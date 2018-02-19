@@ -1,5 +1,6 @@
 ﻿{
   "dependencies": {
+    "Acr.UserDialogs": "6.5.1",
     "FontAwesome": "4.7.0",
     "IdentityModel": "3.1.0",
     "IdentityModel.OidcClient": "2.4.0",

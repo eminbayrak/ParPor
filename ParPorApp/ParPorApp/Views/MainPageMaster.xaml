@@ -28,7 +28,7 @@
                     <Label
                         Grid.Column="1"
                         Grid.Row="2"
-                        Text="Princeton Vikings Soccer Group"
+                        Text="{Binding }"
                         Style="{DynamicResource SubtitleStyle}" />
                 </Grid>
             </ListView.Header>

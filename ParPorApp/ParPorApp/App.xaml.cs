@@ -31,6 +31,7 @@ namespace ParPorApp
                   && !string.IsNullOrEmpty(Settings.Password))
             {
                 MainPage = new NavigationPage(new LoginPage());
+                
             }
             else
             {

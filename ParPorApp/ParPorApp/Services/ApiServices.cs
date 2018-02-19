@@ -9,16 +9,18 @@ using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using Microsoft.WindowsAzure.MobileServices.Sync;
-using ParPorApp.Models;
+using ParPorApp.ViewModels;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ParPorApp.Helpers;
+using ParPorApp.Views;
+using Xamarin.Forms;
 
 
 namespace ParPorApp.Services
 
 {
-    internal class ApiServices
+    internal class ApiServices : Page
     {
         public async Task<bool> RegisterUserAsync(
             string email, string password, string confirmPassword)
@@ -92,13 +94,14 @@ namespace ParPorApp.Services
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
                 "Bearer", accessToken);
 
-            var json = await client.GetStringAsync(Constants.BaseApiAddress + "api/group");
+            var json = await client.GetStringAsync(Constants.BaseApiAddress + "api/groups");
 
             var group = JsonConvert.DeserializeObject<List<Group>>(json);
 
             return group;
         }
 
+        // get events list
         public async Task<List<Events>> GetEventsAsync(string accessToken)
         {
             var client = new HttpClient();
@@ -111,6 +114,7 @@ namespace ParPorApp.Services
 
             return events;
         }
+        
 
         //public class AzureDataService
         //{

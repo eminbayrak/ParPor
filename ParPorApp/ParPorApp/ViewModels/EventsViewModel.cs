@@ -1,5 +1,5 @@
 ﻿using ParPorApp.Helpers;
-using ParPorApp.Models;
+using ParPorApp.ViewModels;
 using ParPorApp.Services;
 using System;
 using System.Collections.Generic;
@@ -12,30 +12,31 @@ using Xamarin.Forms;
 
 namespace ParPorApp.ViewModels
 {
-    class EventsViewModel : INotifyPropertyChanged
+    internal class EventsViewModel : INotifyPropertyChanged
     {
         private readonly ApiServices _apiServices = new ApiServices();
-        private List<Events> _events;
-        //private ObservableCollection<Events> _posts;
-        //public string AccessToken { get; set; }
-        public List<Events> Events
+        private List<Events> _event;
+
+
+        public string AccessToken { get; set; }
+
+        public List<Events> Event
         {
-            get { return _events; }
+            get => _event;
             set
             {
-                _events = value;
+                _event = value;
                 OnPropertyChanged();
-            }
+            } 
         }
+
         public ICommand GetEventsCommand
         {
             get
-            {
-                return new Command(async () =>
-                {
-                    var accessToken = Settings.AccessToken;
-                    Events = await _apiServices.GetEventsAsync(accessToken);
-                });
+            { return new Command(async () =>
+              {
+                Event = await _apiServices.GetEventsAsync(AccessToken);
+              });
             }
         }
 
