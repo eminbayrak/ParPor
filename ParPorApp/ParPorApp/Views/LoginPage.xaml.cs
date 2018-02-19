@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-
+using ParPorApp.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,21 +17,16 @@ namespace ParPorApp.Views
         public LoginPage()
         {
             InitializeComponent();
-            //EmailEntry.Completed += (object sender, EventArgs e) =>
-            //{
-            //    PasswordEntry.Focus();
-            //};
+            EmailEntry.Completed += (sender, args) => { PasswordEntry.Focus(); };
+            PasswordEntry.Completed += (sender, args) => { LoginButton.Focus(); };
             
-            //Init();
         }
-        //void Init()
+        
+
+        //private async void NavigateToMainPage(object sender, EventArgs e)
         //{
-        //    LogoIcon.HeightRequest = Constants.LogoIconHeight;
+        //    await Navigation.PushAsync(new MainPage());
         //}
-        private async void NavigateToMainPage_OnClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new MainPage());
-        }
 
         
     }

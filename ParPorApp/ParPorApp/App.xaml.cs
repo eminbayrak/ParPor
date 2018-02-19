@@ -6,7 +6,7 @@ using System;
 
 namespace ParPorApp
 {
-    public partial class App : Application
+    public partial class App
     {
         public App()
         {

@@ -13,7 +13,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="10">
-                <Image x:Name="LogoIcon" Source="logo.png" Margin="20,40,20,40" />
+                <Image x:Name="LogoIcon" Source="logo.png" HeightRequest="120" WidthRequest="120" Margin="20,60,20,40" />
                 <StackLayout.Padding>
                     <OnIdiom x:TypeArguments="Thickness">
                         <OnIdiom.Phone>
@@ -24,11 +24,25 @@
                         </OnIdiom.Tablet>
                     </OnIdiom>
                 </StackLayout.Padding>
-                <Entry x:Name="EmailEntry" Text="{Binding Username}" Placeholder="Email" Keyboard="Email"></Entry>
-                <Entry x:Name="PasswordEntry" Text="{Binding Password}" Placeholder="Password" IsPassword="True"></Entry>
-
-                <Button Command="{Binding LoginCommand}" Style="{StaticResource FollowButton}" Text="Login">
-                </Button>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="ic_account.png" Grid.Row="0" Grid.Column="0" />
+                    <Entry Grid.Row="0" Grid.Column="1" x:Name="EmailEntry" 
+                           HorizontalOptions="FillAndExpand" Text="{Binding Username}"
+                           Placeholder="Email" Keyboard="Email" />
+                    <Image Source="ic_password.png" Grid.Row="1" Grid.Column="0" />
+                    <Entry Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" x:Name="PasswordEntry" Text="{Binding Password}"
+                           Placeholder="Password" IsPassword="True" />
+                </Grid>
+                <Button x:Name="LoginButton" Command="{Binding LoginCommand}" Style="{StaticResource FollowButton}"
+                        Text="Login" />
                 <Label x:Name="messageLabel" />
             </StackLayout>
         </ScrollView>
