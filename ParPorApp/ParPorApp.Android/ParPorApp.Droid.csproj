@@ -335,6 +335,26 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_password.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_password.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_password.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_contacts.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_exit.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_group.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_contacts.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_exit.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_group.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_contacts.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_exit.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_group.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_message.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_message.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_message.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_contacts.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_exit.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_group.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_message.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_contacts.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_exit.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_group.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_message.png" />
     <Content Include="Resources\drawable\CurvedMask.png" />
   </ItemGroup>
   <ItemGroup>

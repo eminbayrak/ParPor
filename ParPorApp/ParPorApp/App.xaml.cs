@@ -6,7 +6,7 @@ using System;
 
 namespace ParPorApp
 {
-    public partial class App
+    public partial class App : Application
     {
         public App()
         {
@@ -31,7 +31,6 @@ namespace ParPorApp
                   && !string.IsNullOrEmpty(Settings.Password))
             {
                 MainPage = new NavigationPage(new LoginPage());
-                
             }
             else
             {

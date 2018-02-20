@@ -17,6 +17,6 @@ namespace ParPorApp.Views
         public string Title { get; set; }
 
         public Type TargetType { get; set; }
-        public string Icon { get; internal set; }
+        public string IconSource { get; internal set; }
     }
 }
